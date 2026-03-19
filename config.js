@@ -34,7 +34,16 @@ const CONFIG = {
   opaciteFond:  0.40,  // transparence du fond de carte gris (0 = blanc pur)
 
   // ── Données ──────────────────────────────────────────────────
-  // Chemin vers le fichier TopoJSON (ne modifier que si vous renommez le fichier)
+
+  // Fichier principal chargé par la carte (TopoJSON = contours + zones fusionnés)
+  // Ne modifier que si vous renommez le fichier
   fichierDonnees: './data/communes-2025.topo.json',
+
+  // Fichier source CSV officiel (utilisé uniquement par build-data.mjs pour
+  // régénérer le TopoJSON — pas chargé par la carte elle-même)
+  fichierCSV: './data/liste-des-communes-zonage-abc-5-septembre-2025.csv',
+
+  // Source CSV en ligne (alternative au fichier local dans build-data.mjs)
+  urlCSV: 'https://www.data.gouv.fr/api/1/datasets/r/13f7282b-8a25-43ab-9713-8bb4e476df55',
 
 };
