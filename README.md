@@ -63,6 +63,7 @@ Les communes **reclassées** au 5 septembre 2025 sont signalées lors du clic su
 | Zonage ABC 2025 | Ministère du Logement — data.gouv.fr | [Télécharger le CSV](https://www.data.gouv.fr/fr/datasets/liste-des-communes-selon-le-zonage-abc/) |
 | Contours des communes | OpenDataSoft / IGN — georef-france-commune | [Accéder au dataset](https://public.opendatasoft.com/explore/dataset/georef-france-commune/) |
 | Fond de carte & labels | CartoDB (OpenStreetMap contributors) | [carto.com](https://carto.com/) |
+| Inspiration & contours géographiques | François Burdy — zones-abc-pinel-map | [github.com/francoisburdy](https://github.com/francoisburdy/zones-abc-pinel-map) |
 
 <br>
 
