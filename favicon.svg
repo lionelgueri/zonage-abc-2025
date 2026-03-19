@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Fond sombre arrondi -->
+  <rect width="32" height="32" rx="6" fill="#16213e"/>
+  <!-- Pin de localisation -->
+  <path d="M16 4C11.582 4 8 7.582 8 12c0 6 8 16 8 16s8-10 8-16c0-4.418-3.582-8-8-8z"
+        fill="#e94560"/>
+  <!-- Cercle intérieur blanc -->
+  <circle cx="16" cy="12" r="3.2" fill="#ffffff"/>
+</svg>
