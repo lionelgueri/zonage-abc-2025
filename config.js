@@ -47,3 +47,7 @@ const CONFIG = {
   urlCSV: 'https://www.data.gouv.fr/api/1/datasets/r/13f7282b-8a25-43ab-9713-8bb4e476df55',
 
 };
+
+// Exportation pour Node.js (utilisé par build-data.mjs)
+// Le navigateur ignore cette ligne
+if (typeof module !== 'undefined') module.exports = { CONFIG };
