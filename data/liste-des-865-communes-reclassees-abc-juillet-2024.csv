@@ -1,0 +1,866 @@
+CODGEO;LIBGEO;DEP N°;Région;Zone avant révision 2024;Reclassements juillet 2024
+01078;Challex;01;Auvergne-Rhône-Alpes;B1;A
+01103;Chevry;01;Auvergne-Rhône-Alpes;B1;A
+01105;Civrieux;01;Auvergne-Rhône-Alpes;B2;B1
+01143;Divonne-les-Bains;01;Auvergne-Rhône-Alpes;A;Abis
+01153;Échenevex;01;Auvergne-Rhône-Alpes;B1;A
+01160;Ferney-Voltaire;01;Auvergne-Rhône-Alpes;A;Abis
+01180;Grilly;01;Auvergne-Rhône-Alpes;B1;A
+01238;Massieux;01;Auvergne-Rhône-Alpes;B2;B1
+01244;Meximieux;01;Auvergne-Rhône-Alpes;B2;B1
+01248;Mionnay;01;Auvergne-Rhône-Alpes;B2;B1
+01250;Misérieux;01;Auvergne-Rhône-Alpes;B2;B1
+01281;Ornex;01;Auvergne-Rhône-Alpes;A;Abis
+01313;Prévessin-Moëns;01;Auvergne-Rhône-Alpes;A;Abis
+01333;Saint-André-de-Corcy;01;Auvergne-Rhône-Alpes;B2;B1
+01354;Saint-Genis-Pouilly;01;Auvergne-Rhône-Alpes;A;Abis
+01360;Saint-Jean-de-Gonville;01;Auvergne-Rhône-Alpes;B1;A
+01397;Sauverny;01;Auvergne-Rhône-Alpes;B1;Abis
+01399;Ségny;01;Auvergne-Rhône-Alpes;A;Abis
+01401;Sergy;01;Auvergne-Rhône-Alpes;B1;A
+01424;Tramoyes;01;Auvergne-Rhône-Alpes;B2;B1
+01435;Versonnex;01;Auvergne-Rhône-Alpes;B1;Abis
+01436;Vesancy;01;Auvergne-Rhône-Alpes;B1;A
+01443;Villars-les-Dombes;01;Auvergne-Rhône-Alpes;B2;B1
+04073;Enchastrayes;04;Provence-Alpes-Côte d'Azur;C;B1
+04088;Forcalquier;04;Provence-Alpes-Côte d'Azur;B2;B1
+04094;Gréoux-les-Bains;04;Provence-Alpes-Côte d'Azur;B2;B1
+04112;Manosque;04;Provence-Alpes-Côte d'Azur;B2;B1
+04152;Pierrevert;04;Provence-Alpes-Côte d'Azur;B2;B1
+05040;Chorges;05;Provence-Alpes-Côte d'Azur;C;B1
+05079;Le Monêtier-les-Bains;05;Provence-Alpes-Côte d'Azur;C;B1
+05098;Les Orres;05;Provence-Alpes-Côte d'Azur;C;B1
+05101;Vallouise-Pelvoux;05;Provence-Alpes-Côte d'Azur;C;B1
+05133;Saint-Chaffrey;05;Provence-Alpes-Côte d'Azur;C;B1
+05161;La Salle-les-Alpes;05;Provence-Alpes-Côte d'Azur;C;B1
+05177;Vars;05;Provence-Alpes-Côte d'Azur;C;B1
+06011;Beaulieu-sur-Mer;06;Provence-Alpes-Côte d'Azur;A;Abis
+06012;Beausoleil;06;Provence-Alpes-Côte d'Azur;A;Abis
+06014;Bendejun;06;Provence-Alpes-Côte d'Azur;B2;B1
+06018;Biot;06;Provence-Alpes-Côte d'Azur;A;Abis
+06019;Blausasc;06;Provence-Alpes-Côte d'Azur;B2;B1
+06032;Cap-d'Ail;06;Provence-Alpes-Côte d'Azur;A;Abis
+06036;Castillon;06;Provence-Alpes-Côte d'Azur;B2;B1
+06059;Èze;06;Provence-Alpes-Côte d'Azur;A;Abis
+06073;Isola;06;Provence-Alpes-Côte d'Azur;C;B1
+06092;Peillon;06;Provence-Alpes-Côte d'Azur;B2;B1
+06094;Péone;06;Provence-Alpes-Côte d'Azur;C;B1
+06100;Revest-les-Roches;06;Provence-Alpes-Côte d'Azur;B2;B1
+06104;Roquebrune-Cap-Martin;06;Provence-Alpes-Côte d'Azur;A;Abis
+06105;Roquefort-les-Pins;06;Provence-Alpes-Côte d'Azur;A;Abis
+06120;Saint-Étienne-de-Tinée;06;Provence-Alpes-Côte d'Azur;C;B1
+06121;Saint-Jean-Cap-Ferrat;06;Provence-Alpes-Côte d'Azur;A;Abis
+06127;Saint-Martin-Vésubie;06;Provence-Alpes-Côte d'Azur;C;B1
+06130;Saint-Vallier-de-Thiey;06;Provence-Alpes-Côte d'Azur;B1;A
+06150;La Turbie;06;Provence-Alpes-Côte d'Azur;A;Abis
+06152;Valbonne;06;Provence-Alpes-Côte d'Azur;A;Abis
+06159;Villefranche-sur-Mer;06;Provence-Alpes-Côte d'Azur;A;Abis
+07281;Saint-Péray;07;Auvergne-Rhône-Alpes;B2;B1
+13008;Aurons;13;Provence-Alpes-Côte d'Azur;B2;B1
+13010;Barbentane;13;Provence-Alpes-Côte d'Azur;B2;B1
+13011;Les Baux-de-Provence;13;Provence-Alpes-Côte d'Azur;B2;B1
+13018;Cabannes;13;Provence-Alpes-Côte d'Azur;B2;B1
+13022;Cassis;13;Provence-Alpes-Côte d'Azur;A;Abis
+13032;Éguilles;13;Provence-Alpes-Côte d'Azur;B1;A
+13035;Eyguières;13;Provence-Alpes-Côte d'Azur;B2;B1
+13036;Eyragues;13;Provence-Alpes-Côte d'Azur;B2;B1
+13037;La Fare-les-Oliviers;13;Provence-Alpes-Côte d'Azur;B1;A
+13038;Fontvieille;13;Provence-Alpes-Côte d'Azur;B2;B1
+13045;Graveson;13;Provence-Alpes-Côte d'Azur;B2;B1
+13048;Jouques;13;Provence-Alpes-Côte d'Azur;B2;B1
+13049;Lamanon;13;Provence-Alpes-Côte d'Azur;B2;B1
+13050;Lambesc;13;Provence-Alpes-Côte d'Azur;B1;A
+13051;Lançon-Provence;13;Provence-Alpes-Côte d'Azur;B1;A
+13053;Mallemort;13;Provence-Alpes-Côte d'Azur;B2;B1
+13065;Mouriès;13;Provence-Alpes-Côte d'Azur;B2;B1
+13066;Noves;13;Provence-Alpes-Côte d'Azur;B2;B1
+13068;Paradou;13;Provence-Alpes-Côte d'Azur;B2;B1
+13069;Pélissanne;13;Provence-Alpes-Côte d'Azur;B1;A
+13079;Puyloubier;13;Provence-Alpes-Côte d'Azur;B2;B1
+13080;Le Puy-Sainte-Réparade;13;Provence-Alpes-Côte d'Azur;B1;A
+13082;Rognes;13;Provence-Alpes-Côte d'Azur;B1;A
+13083;Rognonas;13;Provence-Alpes-Côte d'Azur;B2;B1
+13084;La Roque-d'Anthéron;13;Provence-Alpes-Côte d'Azur;B2;B1
+13090;Saint-Antonin-sur-Bayon;13;Provence-Alpes-Côte d'Azur;B2;A
+13091;Saint-Cannat;13;Provence-Alpes-Côte d'Azur;B1;A
+13096;Saintes-Maries-de-la-Mer;13;Provence-Alpes-Côte d'Azur;B1;A
+13105;Sénas;13;Provence-Alpes-Côte d'Azur;B2;B1
+13114;Ventabren;13;Provence-Alpes-Côte d'Azur;B1;A
+13115;Vernègues;13;Provence-Alpes-Côte d'Azur;B2;B1
+14076;Blainville-sur-Orne;14;Normandie;B2;B1
+14079;Blonville-sur-Mer;14;Normandie;B2;A
+14086;Bonneville-sur-Touques;14;Normandie;B2;B1
+14225;Dives-sur-Mer;14;Normandie;B2;B1
+14228;Douvres-la-Délivrande;14;Normandie;B2;B1
+14238;Englesqueville-en-Auge;14;Normandie;C;B1
+14301;Giberville;14;Normandie;B2;B1
+14325;Hermanville-sur-Mer;14;Normandie;B2;B1
+14384;Luc-sur-Mer;14;Normandie;B2;B1
+14409;Merville-Franceville-Plage;14;Normandie;B2;B1
+14514;Pont-l'Évêque;14;Normandie;B2;B1
+14557;Saint-Arnoult;14;Normandie;B2;B1
+14562;Saint-Aubin-sur-Mer;14;Normandie;B2;B1
+14699;Touques;14;Normandie;B2;B1
+14701;Tourgéville;14;Normandie;B2;A
+16015;Angoulême;16;Nouvelle-Aquitaine;B2;B1
+17003;Aigrefeuille-d'Aunis;17;Nouvelle-Aquitaine;C;B1
+17140;Dolus-d'Oléron;17;Nouvelle-Aquitaine;B2;B1
+17200;Lagord;17;Nouvelle-Aquitaine;B1;A
+17369;Saint-Martin-de-Ré;17;Nouvelle-Aquitaine;B1;A
+17407;Sainte-Soulle;17;Nouvelle-Aquitaine;B2;B1
+17414;Saint-Xandre;17;Nouvelle-Aquitaine;B2;B1
+19031;Brive-la-Gaillarde;19;Nouvelle-Aquitaine;B2;B1
+19123;Malemort;19;Nouvelle-Aquitaine;B2;B1
+19229;Saint-Pantaléon-de-Larche;19;Nouvelle-Aquitaine;B2;B1
+19274;Ussac;19;Nouvelle-Aquitaine;B2;B1
+21003;Ahuy;21;Bourgogne-Franche-Comté;B2;B1
+22093;Lamballe-Armor;22;Bretagne;C;B1
+22094;Lancieux;22;Bretagne;B2;B1
+22278;Saint-Brieuc;22;Bretagne;B2;B1
+22325;Saint-Quay-Portrieux;22;Bretagne;C;B1
+25157;La Cluse-et-Mijoux;25;Bourgogne-Franche-Comté;C;B1
+25254;Les Fourgs;25;Bourgogne-Franche-Comté;C;B1
+25307;Les Hôpitaux-Neufs;25;Bourgogne-Franche-Comté;C;B1
+25308;Les Hôpitaux-Vieux;25;Bourgogne-Franche-Comté;C;B1
+25318;Jougne;25;Bourgogne-Franche-Comté;C;B1
+25320;Labergement-Sainte-Marie;25;Bourgogne-Franche-Comté;C;B1
+25321;Villers-le-Lac;25;Bourgogne-Franche-Comté;C;B1
+25361;Malbuisson;25;Bourgogne-Franche-Comté;C;B1
+25380;Métabief;25;Bourgogne-Franche-Comté;B2;B1
+25405;Montperreux;25;Bourgogne-Franche-Comté;C;B1
+25411;Morteau;25;Bourgogne-Franche-Comté;B2;B1
+25514;Saint-Antoine;25;Bourgogne-Franche-Comté;C;B1
+25565;Touillon-et-Loutelet;25;Bourgogne-Franche-Comté;C;B1
+25578;Valdahon;25;Bourgogne-Franche-Comté;C;B1
+26088;Chatuzange-le-Goubet;26;Auvergne-Rhône-Alpes;B2;B1
+26252;Portes-lès-Valence;26;Auvergne-Rhône-Alpes;B2;B1
+26313;Saint-Marcel-lès-Valence;26;Auvergne-Rhône-Alpes;B2;B1
+28185;Goussainville;28;Centre-Val de Loire;B2;B1
+28227;Maintenon;28;Centre-Val de Loire;B2;B1
+29006;Bénodet;29;Bretagne;B2;B1
+29031;Clohars-Carnoët;29;Bretagne;C;B1
+29057;La Forêt-Fouesnant;29;Bretagne;B2;B1
+29061;Gouesnou;29;Bretagne;B2;B1
+29190;Plougonvelin;29;Bretagne;C;B1
+2A048;Calcatoggio;2A;Corse;B2;B1
+2A060;Cannelle;2A;Corse;B2;B1
+2A062;Carbuccia;2A;Corse;B2;B1
+2A098;Coti-Chiavari;2A;Corse;B2;B1
+2A104;Eccica-Suarella;2A;Corse;B2;B1
+2A130;Grosseto-Prugna;2A;Corse;B1;A
+2A144;Lopigna;2A;Corse;B2;B1
+2A228;Pietrosella;2A;Corse;B1;A
+2A249;Propriano;2A;Corse;B1;A
+2A271;Sarrola-Carcopino;2A;Corse;B1;A
+2A276;Serra-di-Ferro;2A;Corse;B2;B1
+2A295;Sant'Andréa-d'Orcino;2A;Corse;B2;B1
+2A345;Vero;2A;Corse;B2;B1
+2A362;Zonza;2A;Corse;B2;B1
+2B096;Corte;2B;Corse;B2;B1
+2B109;Farinole;2B;Corse;B2;B1
+2B123;Ghisonaccia;2B;Corse;B2;B1
+2B134;L'Île-Rousse;2B;Corse;B1;A
+2B136;Lama;2B;Corse;B2;B1
+2B184;Olcani;2B;Corse;B2;B1
+2B185;Oletta;2B;Corse;B2;B1
+2B224;Pietracorbara;2B;Corse;B2;B1
+2B251;Prunelli-di-Fiumorbo;2B;Corse;B2;B1
+2B298;Saint-Florent;2B;Corse;B2;B1
+2B313;San-Nicolao;2B;Corse;B2;B1
+30034;Bellegarde;30;Occitanie;B2;B1
+30141;Laudun-l'Ardoise;30;Occitanie;B2;B1
+30276;Saint-Laurent-d'Aigouze;30;Occitanie;B2;B1
+30321;Sommières;30;Occitanie;C;B1
+31069;Blagnac;31;Occitanie;B1;A
+31149;Colomiers;31;Occitanie;B1;A
+31254;Labège;31;Occitanie;B1;A
+31561;L'Union;31;Occitanie;B1;A
+32160;L'Isle-Jourdain;32;Occitanie;C;B1
+33023;Ayguemorte-les-Graves;33;Nouvelle-Aquitaine;C;B1
+33029;Le Barp;33;Nouvelle-Aquitaine;C;B1
+33042;Belin-Béliet;33;Nouvelle-Aquitaine;C;B1
+33097;Carcans;33;Nouvelle-Aquitaine;C;B1
+33140;Créon;33;Nouvelle-Aquitaine;C;B1
+33203;Hourtin;33;Nouvelle-Aquitaine;C;B1
+33206;Isle-Saint-Georges;33;Nouvelle-Aquitaine;C;B1
+33213;La Brède;33;Nouvelle-Aquitaine;C;B1
+33229;Lanton;33;Nouvelle-Aquitaine;B2;B1
+33238;Léognan;33;Nouvelle-Aquitaine;B1;A
+33256;Ludon-Médoc;33;Nouvelle-Aquitaine;C;B1
+33284;Mios;33;Nouvelle-Aquitaine;C;B1
+33318;Pessac;33;Nouvelle-Aquitaine;B1;A
+33333;Le Porge;33;Nouvelle-Aquitaine;C;A
+33366;Saint-André-de-Cubzac;33;Nouvelle-Aquitaine;B2;B1
+33454;Saint-Morillon;33;Nouvelle-Aquitaine;C;B1
+33498;Salles;33;Nouvelle-Aquitaine;C;B1
+33501;Saucats;33;Nouvelle-Aquitaine;C;B1
+33529;La Teste-de-Buch;33;Nouvelle-Aquitaine;B1;A
+33540;Vendays-Montalivet;33;Nouvelle-Aquitaine;C;B1
+33555;Marcheprime;33;Nouvelle-Aquitaine;B2;B1
+34022;Baillargues;34;Occitanie;B1;A
+34039;Bouzigues;34;Occitanie;B2;B1
+34050;Candillargues;34;Occitanie;B2;B1
+34082;Combaillaux;34;Occitanie;C;B1
+34118;Guzargues;34;Occitanie;C;B1
+34153;Les Matelles;34;Occitanie;C;B1
+34176;Mudaison;34;Occitanie;B2;B1
+34179;Murviel-lès-Montpellier;34;Occitanie;C;B1
+34213;Poussan;34;Occitanie;B2;B1
+34314;Le Triadou;34;Occitanie;C;B1
+34320;Vailhauquès;34;Occitanie;C;B1
+34329;Vendres;34;Occitanie;B2;B1
+35049;Cancale;35;Bretagne;B2;B1
+35069;Châteaugiron;35;Bretagne;C;B1
+35173;Melesse;35;Bretagne;C;B1
+35177;La Mézière;35;Bretagne;C;B1
+35207;Noyal-sur-Vilaine;35;Bretagne;B2;B1
+35228;Pleurtuit;35;Bretagne;B2;B1
+35238;Rennes;35;Bretagne;B1;A
+35256;Saint-Briac-sur-Mer;35;Bretagne;B2;B1
+35287;Saint-Lunaire;35;Bretagne;B2;B1
+35299;Saint-Méloir-des-Ondes;35;Bretagne;B2;B1
+35360;Vitré;35;Bretagne;C;B1
+37159;Monts;37;Centre-Val de Loire;B2;B1
+38002;Les Adrets;38;Auvergne-Rhône-Alpes;C;B1
+38011;Anthon;38;Auvergne-Rhône-Alpes;C;B1
+38059;Brié-et-Angonnes;38;Auvergne-Rhône-Alpes;C;B1
+38067;Chamagnieu;38;Auvergne-Rhône-Alpes;C;B1
+38109;Chozeau;38;Auvergne-Rhône-Alpes;C;B1
+38110;Chuzelles;38;Auvergne-Rhône-Alpes;C;B1
+38111;Claix;38;Auvergne-Rhône-Alpes;B1;A
+38140;Crolles;38;Auvergne-Rhône-Alpes;B1;A
+38144;Diémoz;38;Auvergne-Rhône-Alpes;C;B1
+38176;Frontonas;38;Auvergne-Rhône-Alpes;C;B1
+38179;Gières;38;Auvergne-Rhône-Alpes;B1;A
+38181;Goncelin;38;Auvergne-Rhône-Alpes;C;B1
+38184;Grenay;38;Auvergne-Rhône-Alpes;C;B1
+38188;Herbeys;38;Auvergne-Rhône-Alpes;C;B1
+38189;Heyrieux;38;Auvergne-Rhône-Alpes;C;B1
+38197;Janneyrias;38;Auvergne-Rhône-Alpes;C;B1
+38205;Lans-en-Vercors;38;Auvergne-Rhône-Alpes;C;B1
+38214;Lumbin;38;Auvergne-Rhône-Alpes;C;B1
+38215;Luzinay;38;Auvergne-Rhône-Alpes;C;B1
+38249;Montbonnot-Saint-Martin;38;Auvergne-Rhône-Alpes;B1;A
+38314;Pontcharra;38;Auvergne-Rhône-Alpes;B2;B1
+38397;Saint-Ismier;38;Auvergne-Rhône-Alpes;B1;A
+38408;Saint-Just-Chaleyssin;38;Auvergne-Rhône-Alpes;C;B1
+38422;Saint-Martin-d'Uriage;38;Auvergne-Rhône-Alpes;B1;A
+38433;Saint-Nizier-du-Moucherotte;38;Auvergne-Rhône-Alpes;C;B1
+38471;Le Sappey-en-Chartreuse;38;Auvergne-Rhône-Alpes;C;B1
+38475;Satolas-et-Bonce;38;Auvergne-Rhône-Alpes;B2;B1
+38486;Seyssins;38;Auvergne-Rhône-Alpes;B1;A
+38487;Seyssuel;38;Auvergne-Rhône-Alpes;B2;B1
+38501;Tencin;38;Auvergne-Rhône-Alpes;C;B1
+38503;La Terrasse;38;Auvergne-Rhône-Alpes;C;B1
+38516;La Tronche;38;Auvergne-Rhône-Alpes;B1;A
+38519;Valencin;38;Auvergne-Rhône-Alpes;C;B1
+38528;Vaulnaveys-le-Bas;38;Auvergne-Rhône-Alpes;C;B1
+38557;Villette-d'Anthon;38;Auvergne-Rhône-Alpes;C;B1
+38558;Villette-de-Vienne;38;Auvergne-Rhône-Alpes;C;B1
+39470;Les Rousses;39;Bourgogne-Franche-Comté;B2;B1
+40021;Azur;40;Nouvelle-Aquitaine;C;B1
+40108;Gastes;40;Nouvelle-Aquitaine;C;B1
+40150;Léon;40;Nouvelle-Aquitaine;C;B1
+40157;Lit-et-Mixe;40;Nouvelle-Aquitaine;C;B1
+40181;Messanges;40;Nouvelle-Aquitaine;C;B1
+40187;Moliets-et-Maa;40;Nouvelle-Aquitaine;C;B1
+40217;Parentis-en-Born;40;Nouvelle-Aquitaine;C;B1
+40261;Saint-Geours-de-Maremne;40;Nouvelle-Aquitaine;C;B1
+40266;Saint-Julien-en-Born;40;Nouvelle-Aquitaine;C;B1
+40287;Sanguinet;40;Nouvelle-Aquitaine;B2;B1
+40326;Vielle-Saint-Girons;40;Nouvelle-Aquitaine;C;B1
+40328;Vieux-Boucau-les-Bains;40;Nouvelle-Aquitaine;C;B1
+42275;Saint-Priest-en-Jarez;42;Auvergne-Rhône-Alpes;B2;B1
+42305;La Talaudière;42;Auvergne-Rhône-Alpes;B2;B1
+44029;Divatte-sur-Loire;44;Pays de la Loire;C;B1
+44041;La Chevrolière;44;Pays de la Loire;C;B1
+44043;Clisson;44;Pays de la Loire;B2;B1
+44064;Gorges;44;Pays de la Loire;C;B1
+44066;Grandchamp-des-Fontaines;44;Pays de la Loire;B2;B1
+44070;La Haie-Fouassière;44;Pays de la Loire;B2;B1
+44084;Le Loroux-Bottereau;44;Pays de la Loire;C;B1
+44097;Mesquer;44;Pays de la Loire;B2;B1
+44109;Nantes;44;Pays de la Loire;B1;A
+44125;Piriac-sur-Mer;44;Pays de la Loire;B2;B1
+44126;La Plaine-sur-Mer;44;Pays de la Loire;B2;B1
+44136;Préfailles;44;Pays de la Loire;B2;B1
+44158;Saint-Étienne-de-Montluc;44;Pays de la Loire;C;B1
+44169;Saint-Julien-de-Concelles;44;Pays de la Loire;C;B1
+44179;Saint-Mars-du-Désert;44;Pays de la Loire;B2;B1
+44186;Sainte-Pazanne;44;Pays de la Loire;C;B1
+44187;Saint-Père-en-Retz;44;Pays de la Loire;C;B1
+44188;Saint-Philbert-de-Grand-Lieu;44;Pays de la Loire;C;B1
+44195;Savenay;44;Pays de la Loire;B2;B1
+44201;Sucé-sur-Erdre;44;Pays de la Loire;B2;B1
+44209;Treillières;44;Pays de la Loire;B2;B1
+44212;Vallet;44;Pays de la Loire;C;B1
+44217;Vigneux-de-Bretagne;44;Pays de la Loire;B2;B1
+49020;Beaucouzé;49;Pays de la Loire;B2;B1
+49035;Bouchemaine;49;Pays de la Loire;B2;B1
+49129;Écouflant;49;Pays de la Loire;B2;B1
+49214;Montreuil-Juigné;49;Pays de la Loire;B2;B1
+49223;Mûrs-Erigné;49;Pays de la Loire;B2;B1
+49267;Saint-Barthélemy-d'Anjou;49;Pays de la Loire;B2;B1
+49278;Sainte-Gemmes-sur-Loire;49;Pays de la Loire;B2;B1
+49323;Verrières-en-Anjou;49;Pays de la Loire;B2;B1
+50165;Donville-les-Bains;50;Normandie;B2;B1
+50532;Saint-Pair-sur-Mer;50;Normandie;B2;B1
+51662;Witry-lès-Reims;51;Grand Est;B2;B1
+53034;Bonchamp-lès-Laval;53;Pays de la Loire;B2;B1
+53054;Changé;53;Pays de la Loire;B2;B1
+53119;L'Huisserie;53;Pays de la Loire;B2;B1
+53130;Laval;53;Pays de la Loire;B2;B1
+53140;Louverné;53;Pays de la Loire;B2;B1
+53201;Saint-Berthevin;53;Pays de la Loire;B2;B1
+56003;Arradon;56;Bretagne;B2;B1
+56008;Baden;56;Bretagne;B2;B1
+56013;Belz;56;Bretagne;C;B1
+56023;Brech;56;Bretagne;B2;B1
+56046;Crach;56;Bretagne;B2;B1
+56052;Damgan;56;Bretagne;C;B1
+56054;Erdeven;56;Bretagne;C;B1
+56055;Étel;56;Bretagne;C;B1
+56069;Groix;56;Bretagne;B2;B1
+56086;Île-d'Houat;56;Bretagne;B2;B1
+56094;Kervignac;56;Bretagne;C;B1
+56116;Locmariaquer;56;Bretagne;B2;B1
+56118;Locmiquélic;56;Bretagne;B2;B1
+56155;Pénestin;56;Bretagne;B2;B1
+56158;Plescop;56;Bretagne;B2;B1
+56164;Ploeren;56;Bretagne;B2;B1
+56168;Plouharnel;56;Bretagne;B2;B1
+56169;Plouhinec;56;Bretagne;C;B1
+56176;Pluneret;56;Bretagne;B2;B1
+56181;Port-Louis;56;Bretagne;B2;B1
+56193;Riantec;56;Bretagne;B2;B1
+56214;Saint-Gildas-de-Rhuys;56;Bretagne;B2;B1
+56233;Saint-Philibert;56;Bretagne;B2;B1
+56234;Saint-Pierre-Quiberon;56;Bretagne;B2;B1
+56248;Surzur;56;Bretagne;B2;B1
+56251;Theix-Noyalo;56;Bretagne;B2;B1
+56258;La Trinité-sur-Mer;56;Bretagne;B2;B1
+57038;Audun-le-Tiche;57;Grand Est;B2;B1
+57049;Le Ban-Saint-Martin;57;Grand Est;B2;B1
+57203;Évrange;57;Grand Est;C;B1
+57269;Guénange;57;Grand Est;B2;B1
+57282;Hagen;57;Grand Est;C;B1
+57283;Hagondange;57;Grand Est;B2;B1
+57323;Hettange-Grande;57;Grand Est;B2;B1
+57412;Longeville-lès-Metz;57;Grand Est;B2;B1
+57441;Manom;57;Grand Est;B2;B1
+57474;Mondelange;57;Grand Est;B2;B1
+57487;Moulins-lès-Metz;57;Grand Est;B2;B1
+57663;Talange;57;Grand Est;B2;B1
+57666;Terville;57;Grand Est;B2;B1
+57683;Uckange;57;Grand Est;B2;B1
+57731;Volmerange-les-Mines;57;Grand Est;B2;B1
+57764;Zoufftgen;57;Grand Est;C;B1
+59071;Bersée;59;Hauts-de-France;B2;B1
+59090;Bondues;59;Hauts-de-France;B1;A
+59107;Bray-Dunes;59;Hauts-de-France;B2;B1
+59124;Camphin-en-Pévèle;59;Hauts-de-France;B2;B1
+59173;Deûlémont;59;Hauts-de-France;B2;B1
+59196;Ennetières-en-Weppes;59;Hauts-de-France;B2;B1
+59208;Escobecques;59;Hauts-de-France;B2;B1
+59222;Faumont;59;Hauts-de-France;B2;B1
+59371;Le Maisnil;59;Hauts-de-France;B2;B1
+59398;Mérignies;59;Hauts-de-France;B2;B1
+59458;Péronne-en-Mélantois;59;Hauts-de-France;B2;B1
+59462;Phalempin;59;Hauts-de-France;B2;B1
+59487;Radinghem-en-Weppes;59;Hauts-de-France;B2;B1
+59586;Templeuve-en-Pévèle;59;Hauts-de-France;B2;B1
+59588;Téteghem-Coudekerque-Village;59;Hauts-de-France;B2;B1
+59600;Tourmignies;59;Hauts-de-France;B2;B1
+59636;Wambrechies;59;Hauts-de-France;B1;A
+59638;Wannehain;59;Hauts-de-France;B2;B1
+59643;Warneton;59;Hauts-de-France;B2;B1
+59653;Wavrin;59;Hauts-de-France;B2;B1
+60022;Apremont;60;Hauts-de-France;B2;B1
+60028;Aumont-en-Halatte;60;Hauts-de-France;B2;A
+60045;Barbery;60;Hauts-de-France;C;B1
+60047;Baron;60;Hauts-de-France;B2;B1
+60056;Beaurepaire;60;Hauts-de-France;C;B1
+60087;Borest;60;Hauts-de-France;B2;B1
+60100;Brasseuse;60;Hauts-de-France;C;B1
+60141;Chantilly;60;Hauts-de-France;A;Abis
+60170;Courteuil;60;Hauts-de-France;B2;A
+60213;Ermenonville;60;Hauts-de-France;B2;B1
+60226;Ève;60;Hauts-de-France;B2;B1
+60238;Fleurines;60;Hauts-de-France;B2;B1
+60241;Fontaine-Chaalis;60;Hauts-de-France;B2;B1
+60391;Maysel;60;Hauts-de-France;C;B1
+60413;Montagny-Sainte-Félicité;60;Hauts-de-France;B2;B1
+60415;Montépilloy;60;Hauts-de-France;C;B1
+60421;Mont-l'Évêque;60;Hauts-de-France;C;B1
+60422;Montlognon;60;Hauts-de-France;B2;B1
+60432;Mortefontaine;60;Hauts-de-France;B2;B1
+60446;Nanteuil-le-Haudouin;60;Hauts-de-France;B2;B1
+60494;Plailly;60;Hauts-de-France;B2;B1
+60500;Le Plessis-Belleville;60;Hauts-de-France;B2;B1
+60505;Pontarmé;60;Hauts-de-France;B2;B1
+60525;Raray;60;Hauts-de-France;C;B1
+60619;Silly-le-Long;60;Hauts-de-France;B2;B1
+60631;Thiers-sur-Thève;60;Hauts-de-France;B2;B1
+60666;Ver-sur-Launette;60;Hauts-de-France;B2;B1
+60671;Versigny;60;Hauts-de-France;B2;B1
+60682;Villers-Saint-Frambourg-Ognon;60;Hauts-de-France;C;B1
+62160;Boulogne-sur-Mer;62;Hauts-de-France;B2;B1
+62193;Calais;62;Hauts-de-France;B2;B1
+62201;Camiers;62;Hauts-de-France;B2;B1
+62491;Laventie;62;Hauts-de-France;C;B1
+62774;Sangatte;62;Hauts-de-France;B2;B1
+62893;Wimereux;62;Hauts-de-France;B2;B1
+63070;Ceyrat;63;Auvergne-Rhône-Alpes;B2;B1
+63307;Romagnat;63;Auvergne-Rhône-Alpes;B2;B1
+63308;Royat;63;Auvergne-Rhône-Alpes;B2;B1
+64249;Guéthary;64;Nouvelle-Aquitaine;B1;A
+66016;Banyuls-sur-Mer;66;Occitanie;B2;B1
+66028;Cabestany;66;Occitanie;B2;B1
+66053;Collioure;66;Occitanie;B2;B1
+66148;Port-Vendres;66;Occitanie;B2;B1
+66189;Saleilles;66;Occitanie;B2;B1
+66212;Torreilles;66;Occitanie;B2;B1
+67021;Barr;67;Grand Est;B2;B1
+67028;Benfeld;67;Grand Est;B2;B1
+67065;Breuschwickersheim;67;Grand Est;C;B1
+67097;Dingsheim;67;Grand Est;C;B1
+67106;Drusenheim;67;Grand Est;B2;B1
+67108;Duppigheim;67;Grand Est;B2;B1
+67128;Ernolsheim-Bruche;67;Grand Est;B2;B1
+67151;Gambsheim;67;Grand Est;B2;B1
+67173;Griesheim-sur-Souffel;67;Grand Est;C;B1
+67182;Hangenbieten;67;Grand Est;C;B1
+67194;Herrlisheim;67;Grand Est;C;B1
+67205;Hœrdt;67;Grand Est;B2;B1
+67214;Hurtigheim;67;Grand Est;C;B1
+67226;Ittenheim;67;Grand Est;C;B1
+67237;Kilstett;67;Grand Est;B2;B1
+67282;Marlenheim;67;Grand Est;B2;B1
+67300;Molsheim;67;Grand Est;B2;B1
+67313;Mutzig;67;Grand Est;B2;B1
+67343;Oberhausbergen;67;Grand Est;B1;A
+67375;Pfulgriesheim;67;Grand Est;C;B1
+67411;Rosheim;67;Grand Est;B2;B1
+67458;Schweighouse-sur-Moder;67;Grand Est;B2;B1
+67462;Sélestat;67;Grand Est;B2;B1
+67485;Stutzheim-Offenheim;67;Grand Est;C;B1
+67495;Truchtersheim;67;Grand Est;C;B1
+67520;Wasselonne;67;Grand Est;B2;B1
+67529;Weyersheim;67;Grand Est;C;B1
+68021;Bartenheim;68;Grand Est;B2;B1
+68042;Blotzheim;68;Grand Est;B2;B1
+68056;Brunstatt-Didenheim;68;Grand Est;B2;B1
+68061;Buschwiller;68;Grand Est;B2;B1
+68082;Ensisheim;68;Grand Est;B2;B1
+68118;Habsheim;68;Grand Est;B2;B1
+68120;Hagenthal-le-Bas;68;Grand Est;C;B1
+68126;Hégenheim;68;Grand Est;B2;B1
+68135;Hésingue;68;Grand Est;B2;B1
+68145;Horbourg-Wihr;68;Grand Est;B2;B1
+68155;Ingersheim;68;Grand Est;B2;B1
+68162;Kaysersberg Vignoble;68;Grand Est;B2;B1
+68163;Kembs;68;Grand Est;B2;B1
+68269;Ribeauvillé;68;Grand Est;B2;B1
+68286;Rosenau;68;Grand Est;B2;B1
+68287;Rouffach;68;Grand Est;B2;B1
+68300;Sausheim;68;Grand Est;B2;B1
+68309;Sierentz;68;Grand Est;B2;B1
+68338;Turckheim;68;Grand Est;B2;B1
+68349;Village-Neuf;68;Grand Est;B2;B1
+68362;Wentzwiller;68;Grand Est;C;B1
+68374;Wintzenheim;68;Grand Est;B2;B1
+68375;Wittelsheim;68;Grand Est;B2;B1
+69040;Champagne-au-Mont-d'Or;69;Auvergne-Rhône-Alpes;B1;A
+69043;Chaponost;69;Auvergne-Rhône-Alpes;B1;A
+69044;Charbonnières-les-Bains;69;Auvergne-Rhône-Alpes;B1;A
+69064;Condrieu;69;Auvergne-Rhône-Alpes;B2;B1
+69069;Craponne;69;Auvergne-Rhône-Alpes;B1;A
+69072;Dardilly;69;Auvergne-Rhône-Alpes;B1;A
+69143;Neuville-sur-Saône;69;Auvergne-Rhône-Alpes;B1;A
+69154;Pollionnay;69;Auvergne-Rhône-Alpes;C;B1
+69191;Saint-Cyr-au-Mont-d'Or;69;Auvergne-Rhône-Alpes;B1;A
+69194;Saint-Didier-au-Mont-d'Or;69;Auvergne-Rhône-Alpes;B1;A
+69219;Saint-Laurent-d'Agny;69;Auvergne-Rhône-Alpes;C;B1
+69250;La Tour-de-Salvagny;69;Auvergne-Rhône-Alpes;B1;A
+69271;Chassieu;69;Auvergne-Rhône-Alpes;B1;A
+69279;Jonage;69;Auvergne-Rhône-Alpes;B1;A
+69282;Meyzieu;69;Auvergne-Rhône-Alpes;B1;A
+69285;Pusignan;69;Auvergne-Rhône-Alpes;C;B1
+69288;Saint-Laurent-de-Mure;69;Auvergne-Rhône-Alpes;B1;A
+69292;Sathonay-Camp;69;Auvergne-Rhône-Alpes;B1;A
+69299;Colombier-Saugnieu;69;Auvergne-Rhône-Alpes;C;B1
+73006;Aime-la-Plagne;73;Auvergne-Rhône-Alpes;C;B1
+73010;Entrelacs;73;Auvergne-Rhône-Alpes;B2;B1
+73024;Les Avanchers-Valmorel;73;Auvergne-Rhône-Alpes;C;B1
+73031;Bassens;73;Auvergne-Rhône-Alpes;B1;A
+73034;Beaufort;73;Auvergne-Rhône-Alpes;C;B1
+73043;La Biolle;73;Auvergne-Rhône-Alpes;C;B1
+73051;Le Bourget-du-Lac;73;Auvergne-Rhône-Alpes;B1;A
+73057;Brides-les-Bains;73;Auvergne-Rhône-Alpes;B1;A
+73064;Challes-les-Eaux;73;Auvergne-Rhône-Alpes;B1;A
+73091;Conjux;73;Auvergne-Rhône-Alpes;C;B1
+73114;Flumet;73;Auvergne-Rhône-Alpes;C;B1
+73116;Fontcouverte-la-Toussuire;73;Auvergne-Rhône-Alpes;C;B1
+73123;La Giettaz;73;Auvergne-Rhône-Alpes;C;B1
+73128;Grésy-sur-Aix;73;Auvergne-Rhône-Alpes;B1;A
+73132;Hauteluce;73;Auvergne-Rhône-Alpes;C;B1
+73137;Jacob-Bellecombette;73;Auvergne-Rhône-Alpes;B1;A
+73171;Montmélian;73;Auvergne-Rhône-Alpes;B2;B1
+73176;Montvalezan;73;Auvergne-Rhône-Alpes;C;B1
+73213;La Ravoire;73;Auvergne-Rhône-Alpes;B1;A
+73222;Saint-Alban-Leysse;73;Auvergne-Rhône-Alpes;B1;A
+73235;Saint François Longchamp;73;Auvergne-Rhône-Alpes;C;B1
+73265;Saint-Ours;73;Auvergne-Rhône-Alpes;C;B1
+73301;Trévignin;73;Auvergne-Rhône-Alpes;B2;B1
+73307;Valmeinier;73;Auvergne-Rhône-Alpes;C;B1
+74001;Abondance;74;Auvergne-Rhône-Alpes;C;B1
+74005;Allinges;74;Auvergne-Rhône-Alpes;B1;A
+74009;Andilly;74;Auvergne-Rhône-Alpes;B1;A
+74019;Argonay;74;Auvergne-Rhône-Alpes;B1;A
+74026;La Balme-de-Sillingy;74;Auvergne-Rhône-Alpes;B1;A
+74027;La Balme-de-Thuy;74;Auvergne-Rhône-Alpes;C;B1
+74036;Bluffy;74;Auvergne-Rhône-Alpes;B2;A
+74037;Boëge;74;Auvergne-Rhône-Alpes;B2;B1
+74043;Bons-en-Chablais;74;Auvergne-Rhône-Alpes;B1;A
+74046;Boussy;74;Auvergne-Rhône-Alpes;C;B1
+74048;Brenthonne;74;Auvergne-Rhône-Alpes;B2;B1
+74049;Brizon;74;Auvergne-Rhône-Alpes;B2;B1
+74050;Burdignin;74;Auvergne-Rhône-Alpes;B2;B1
+74053;Cervens;74;Auvergne-Rhône-Alpes;B2;B1
+74054;Chainaz-les-Frasses;74;Auvergne-Rhône-Alpes;B2;B1
+74056;Chamonix-Mont-Blanc;74;Auvergne-Rhône-Alpes;A;Abis
+74057;Champanges;74;Auvergne-Rhône-Alpes;B2;B1
+74061;Chapeiry;74;Auvergne-Rhône-Alpes;B2;B1
+74065;Chaumont;74;Auvergne-Rhône-Alpes;B2;B1
+74066;Chavannaz;74;Auvergne-Rhône-Alpes;B2;B1
+74068;Chêne-en-Semine;74;Auvergne-Rhône-Alpes;C;B1
+74069;Chênex;74;Auvergne-Rhône-Alpes;B1;A
+74070;Chens-sur-Léman;74;Auvergne-Rhône-Alpes;B1;A
+74071;Chessenaz;74;Auvergne-Rhône-Alpes;C;B1
+74073;Chevenoz;74;Auvergne-Rhône-Alpes;B2;B1
+74075;Chilly;74;Auvergne-Rhône-Alpes;B2;B1
+74077;Clarafond-Arcine;74;Auvergne-Rhône-Alpes;B2;B1
+74082;Collonges-sous-Salève;74;Auvergne-Rhône-Alpes;A;Abis
+74083;Combloux;74;Auvergne-Rhône-Alpes;B1;A
+74085;Les Contamines-Montjoie;74;Auvergne-Rhône-Alpes;C;B1
+74086;Contamine-Sarzin;74;Auvergne-Rhône-Alpes;B2;B1
+74091;La Côte-d'Arbroz;74;Auvergne-Rhône-Alpes;C;B1
+74095;Crempigny-Bonneguête;74;Auvergne-Rhône-Alpes;C;B1
+74100;Desingy;74;Auvergne-Rhône-Alpes;C;B1
+74101;Dingy-en-Vuache;74;Auvergne-Rhône-Alpes;B1;A
+74104;Doussard;74;Auvergne-Rhône-Alpes;B1;A
+74105;Douvaine;74;Auvergne-Rhône-Alpes;B1;A
+74106;Draillant;74;Auvergne-Rhône-Alpes;B2;B1
+74108;Duingt;74;Auvergne-Rhône-Alpes;B2;A
+74109;Éloise;74;Auvergne-Rhône-Alpes;B2;B1
+74111;Entrevernes;74;Auvergne-Rhône-Alpes;B2;A
+74112;Epagny Metz-Tessy;74;Auvergne-Rhône-Alpes;B1;A
+74114;Essert-Romand;74;Auvergne-Rhône-Alpes;C;B1
+74117;Étercy;74;Auvergne-Rhône-Alpes;B2;B1
+74121;Excenevex;74;Auvergne-Rhône-Alpes;B1;A
+74123;Faverges-Seythenex;74;Auvergne-Rhône-Alpes;C;B1
+74126;Fessy;74;Auvergne-Rhône-Alpes;B2;B1
+74127;Féternes;74;Auvergne-Rhône-Alpes;B2;B1
+74129;La Forclaz;74;Auvergne-Rhône-Alpes;B2;B1
+74131;Frangy;74;Auvergne-Rhône-Alpes;C;B1
+74137;Groisy;74;Auvergne-Rhône-Alpes;B1;A
+74141;Hauteville-sur-Fier;74;Auvergne-Rhône-Alpes;B2;B1
+74142;Héry-sur-Alby;74;Auvergne-Rhône-Alpes;B2;B1
+74143;Les Houches;74;Auvergne-Rhône-Alpes;B1;A
+74147;Lathuile;74;Auvergne-Rhône-Alpes;B2;B1
+74151;Lornay;74;Auvergne-Rhône-Alpes;C;B1
+74154;Lugrin;74;Auvergne-Rhône-Alpes;B2;B1
+74156;Lully;74;Auvergne-Rhône-Alpes;B2;B1
+74157;Lyaud;74;Auvergne-Rhône-Alpes;B2;B1
+74161;Marcellaz-Albanais;74;Auvergne-Rhône-Alpes;B2;B1
+74165;Marigny-Saint-Marcel;74;Auvergne-Rhône-Alpes;C;B1
+74168;Marlioz;74;Auvergne-Rhône-Alpes;B2;B1
+74171;Massongy;74;Auvergne-Rhône-Alpes;B1;A
+74172;Maxilly-sur-Léman;74;Auvergne-Rhône-Alpes;B2;B1
+74174;Mégevette;74;Auvergne-Rhône-Alpes;B2;B1
+74175;Meillerie;74;Auvergne-Rhône-Alpes;B2;B1
+74176;Menthon-Saint-Bernard;74;Auvergne-Rhône-Alpes;B1;A
+74177;Menthonnex-en-Bornes;74;Auvergne-Rhône-Alpes;B1;A
+74178;Menthonnex-sous-Clermont;74;Auvergne-Rhône-Alpes;B2;B1
+74179;Mésigny;74;Auvergne-Rhône-Alpes;B2;B1
+74180;Messery;74;Auvergne-Rhône-Alpes;B1;A
+74183;Mieussy;74;Auvergne-Rhône-Alpes;C;B1
+74184;Minzier;74;Auvergne-Rhône-Alpes;B2;B1
+74188;Montriond;74;Auvergne-Rhône-Alpes;C;B1
+74190;Morillon;74;Auvergne-Rhône-Alpes;C;A
+74194;Mûres;74;Auvergne-Rhône-Alpes;B2;B1
+74195;Musièges;74;Auvergne-Rhône-Alpes;C;B1
+74198;Nâves-Parmelan;74;Auvergne-Rhône-Alpes;B2;B1
+74199;Nernier;74;Auvergne-Rhône-Alpes;B1;A
+74200;Neuvecelle;74;Auvergne-Rhône-Alpes;B1;A
+74202;Nonglard;74;Auvergne-Rhône-Alpes;B2;B1
+74203;Novel;74;Auvergne-Rhône-Alpes;C;B1
+74206;Orcier;74;Auvergne-Rhône-Alpes;B2;B1
+74209;Peillonnex;74;Auvergne-Rhône-Alpes;B2;B1
+74210;Perrignier;74;Auvergne-Rhône-Alpes;B2;B1
+74212;Glières-Val-de-Borne;74;Auvergne-Rhône-Alpes;C;B1
+74213;Poisy;74;Auvergne-Rhône-Alpes;B1;A
+74215;Praz-sur-Arly;74;Auvergne-Rhône-Alpes;B1;A
+74218;Publier;74;Auvergne-Rhône-Alpes;B1;A
+74223;La Rivière-Enverse;74;Auvergne-Rhône-Alpes;B2;B1
+74226;Saint-André-de-Boëge;74;Auvergne-Rhône-Alpes;B2;B1
+74228;Saint-Blaise;74;Auvergne-Rhône-Alpes;B1;A
+74231;Saint-Eusèbe;74;Auvergne-Rhône-Alpes;B2;B1
+74236;Saint-Gervais-les-Bains;74;Auvergne-Rhône-Alpes;B1;A
+74237;Saint-Gingolph;74;Auvergne-Rhône-Alpes;B2;B1
+74238;Saint-Jean-d'Aulps;74;Auvergne-Rhône-Alpes;C;B1
+74240;Saint-Jean-de-Tholome;74;Auvergne-Rhône-Alpes;B2;B1
+74241;Saint-Jeoire;74;Auvergne-Rhône-Alpes;C;B1
+74242;Saint-Jorioz;74;Auvergne-Rhône-Alpes;B1;A
+74243;Saint-Julien-en-Genevois;74;Auvergne-Rhône-Alpes;A;Abis
+74249;Saint-Paul-en-Chablais;74;Auvergne-Rhône-Alpes;B2;B1
+74250;Saint-Pierre-en-Faucigny;74;Auvergne-Rhône-Alpes;B1;A
+74252;Saint-Sigismond;74;Auvergne-Rhône-Alpes;B2;B1
+74254;Saint-Sylvestre;74;Auvergne-Rhône-Alpes;B2;B1
+74255;Sales;74;Auvergne-Rhône-Alpes;C;B1
+74257;Sallenôves;74;Auvergne-Rhône-Alpes;B2;B1
+74259;Le Sappey;74;Auvergne-Rhône-Alpes;B1;A
+74261;Saxel;74;Auvergne-Rhône-Alpes;B2;B1
+74263;Sciez;74;Auvergne-Rhône-Alpes;B1;A
+74266;Servoz;74;Auvergne-Rhône-Alpes;B2;B1
+74267;Sevrier;74;Auvergne-Rhône-Alpes;B1;A
+74272;Sillingy;74;Auvergne-Rhône-Alpes;B1;A
+74275;Talloires-Montmin;74;Auvergne-Rhône-Alpes;B1;A
+74276;Taninges;74;Auvergne-Rhône-Alpes;C;A
+74279;Thollon-les-Mémises;74;Auvergne-Rhône-Alpes;B2;B1
+74280;Thônes;74;Auvergne-Rhône-Alpes;B1;A
+74282;Fillière;74;Auvergne-Rhône-Alpes;B1;A
+74283;Thusy;74;Auvergne-Rhône-Alpes;B2;B1
+74284;La Tour;74;Auvergne-Rhône-Alpes;B2;B1
+74285;Usinens;74;Auvergne-Rhône-Alpes;C;B1
+74289;Vallières-sur-Fier;74;Auvergne-Rhône-Alpes;C;B1
+74291;Vanzy;74;Auvergne-Rhône-Alpes;C;B1
+74292;Vaulx;74;Auvergne-Rhône-Alpes;B2;B1
+74294;Verchaix;74;Auvergne-Rhône-Alpes;C;B1
+74295;La Vernaz;74;Auvergne-Rhône-Alpes;B2;B1
+74297;Versonnex;74;Auvergne-Rhône-Alpes;C;B1
+74301;Villard;74;Auvergne-Rhône-Alpes;B2;B1
+74302;Les Villards-sur-Thônes;74;Auvergne-Rhône-Alpes;B2;B1
+74304;Ville-en-Sallaz;74;Auvergne-Rhône-Alpes;B2;B1
+74306;Villy-le-Bouveret;74;Auvergne-Rhône-Alpes;B1;A
+74308;Vinzier;74;Auvergne-Rhône-Alpes;B2;B1
+74310;Viuz-la-Chiésaz;74;Auvergne-Rhône-Alpes;B2;B1
+74311;Viuz-en-Sallaz;74;Auvergne-Rhône-Alpes;B2;A
+74313;Vovray-en-Bornes;74;Auvergne-Rhône-Alpes;B1;A
+74315;Yvoire;74;Auvergne-Rhône-Alpes;B1;A
+77006;Arbonne-la-Forêt;77;Île-de-France;B2;B1
+77029;Beauvoir;77;Île-de-France;B2;B1
+77037;Bois-le-Roi;77;Île-de-France;B1;A
+77047;Bouleurs;77;Île-de-France;B2;B1
+77048;Bourron-Marlotte;77;Île-de-France;B2;B1
+77049;Boutigny;77;Île-de-France;B2;B1
+77088;La Chapelle-la-Reine;77;Île-de-France;B2;B1
+77091;Les Chapelles-Bourbon;77;Île-de-France;B2;B1
+77094;Charmentray;77;Île-de-France;B2;B1
+77100;Le Châtelet-en-Brie;77;Île-de-France;B2;B1
+77104;Châtres;77;Île-de-France;B2;B1
+77107;Chaumes-en-Brie;77;Île-de-France;B2;B1
+77123;Compans;77;Île-de-France;B2;B1
+77127;Coubert;77;Île-de-France;B2;B1
+77130;Coulommes;77;Île-de-France;B2;B1
+77136;Courquetaine;77;Île-de-France;B2;B1
+77144;Crèvecœur-en-Brie;77;Île-de-France;B2;B1
+77175;Évry-Grégy-sur-Yerre;77;Île-de-France;B2;B1
+77177;Favières;77;Île-de-France;B2;B1
+77179;Féricy;77;Île-de-France;B2;B1
+77192;Fontenay-Trésigny;77;Île-de-France;B2;B1
+77214;Gressy;77;Île-de-France;B2;B1
+77217;Grisy-Suisnes;77;Île-de-France;B2;B1
+77229;La Houssaye-en-Brie;77;Île-de-France;B2;B1
+77234;Jablines;77;Île-de-France;B2;B1
+77248;Lesches;77;Île-de-France;B2;B1
+77252;Limoges-Fourches;77;Île-de-France;B2;B1
+77253;Lissy;77;Île-de-France;B2;B1
+77254;Liverdy-en-Brie;77;Île-de-France;B2;B1
+77269;Maincy;77;Île-de-France;B2;B1
+77277;Marles-en-Brie;77;Île-de-France;B2;B1
+77282;Mauregard;77;Île-de-France;B2;B1
+77291;Le Mesnil-Amelot;77;Île-de-France;B2;B1
+77292;Messy;77;Île-de-France;B2;B1
+77312;Montigny-sur-Loing;77;Île-de-France;B2;B1
+77317;Mormant;77;Île-de-France;B2;B1
+77318;Mortcerf;77;Île-de-France;B2;B1
+77323;Moussy-le-Vieux;77;Île-de-France;B2;B1
+77336;Neufmoutiers-en-Brie;77;Île-de-France;B2;B1
+77352;Ozouer-le-Voulgis;77;Île-de-France;B2;B1
+77374;Pontcarré;77;Île-de-France;B1;A
+77376;Précy-sur-Marne;77;Île-de-France;B2;B1
+77377;Presles-en-Brie;77;Île-de-France;B2;B1
+77386;Recloses;77;Île-de-France;B2;B1
+77408;Saint-Fiacre;77;Île-de-France;B2;B1
+77420;Saint-Mard;77;Île-de-France;B2;B1
+77430;Saint-Pathus;77;Île-de-France;B2;B1
+77453;Sivry-Courtry;77;Île-de-France;B2;B1
+77462;Thieux;77;Île-de-France;B2;B1
+77466;Tigeaux;77;Île-de-France;B2;B1
+77474;Trilbardou;77;Île-de-France;B2;B1
+77498;Vignely;77;Île-de-France;B2;B1
+77508;Villeneuve-le-Comte;77;Île-de-France;B2;B1
+77510;Villeneuve-Saint-Denis;77;Île-de-France;B2;B1
+77511;Villeneuve-sous-Dammartin;77;Île-de-France;B2;B1
+78006;Adainville;78;Île-de-France;B2;B1
+78007;Aigremont;78;Île-de-France;B1;Abis
+78013;Andelu;78;Île-de-France;B2;B1
+78020;Arnouville-lès-Mantes;78;Île-de-France;B2;B1
+78034;Auteuil;78;Île-de-France;B2;B1
+78036;Autouillet;78;Île-de-France;B2;B1
+78043;Bailly;78;Île-de-France;B1;Abis
+78048;Bazainville;78;Île-de-France;B2;B1
+78053;Béhoust;78;Île-de-France;B2;B1
+78062;Beynes;78;Île-de-France;B1;A
+78070;Boinville-en-Mantois;78;Île-de-France;B2;B1
+78084;Boissy-sans-Avoir;78;Île-de-France;B2;B1
+78087;Bonnelles;78;Île-de-France;B2;B1
+78092;Bougival;78;Île-de-France;A;Abis
+78096;Bourdonné;78;Île-de-France;B2;B1
+78108;Les Bréviaires;78;Île-de-France;B2;B1
+78117;Buc;78;Île-de-France;A;Abis
+78120;Bullion;78;Île-de-France;B2;B1
+78124;Carrières-sur-Seine;78;Île-de-France;A;Abis
+78125;La Celle-les-Bordes;78;Île-de-France;B2;B1
+78126;La Celle-Saint-Cloud;78;Île-de-France;A;Abis
+78133;Chambourcy;78;Île-de-France;A;Abis
+78143;Châteaufort;78;Île-de-France;B1;A
+78152;Chavenay;78;Île-de-France;B1;A
+78164;Clairefontaine-en-Yvelines;78;Île-de-France;B2;B1
+78171;Condé-sur-Vesgre;78;Île-de-France;B2;B1
+78194;Dannemarie;78;Île-de-France;B2;B1
+78220;Les Essarts-le-Roi;78;Île-de-France;B1;A
+78224;L'Étang-la-Ville;78;Île-de-France;A;Abis
+78233;Feucherolles;78;Île-de-France;B1;A
+78236;Flexanville;78;Île-de-France;B2;B1
+78262;Galluis;78;Île-de-France;B2;B1
+78263;Gambais;78;Île-de-France;B2;B1
+78264;Gambaiseuil;78;Île-de-France;B2;B1
+78265;Garancières;78;Île-de-France;B2;B1
+78278;Goupillières;78;Île-de-France;B2;B1
+78281;Goussonville;78;Île-de-France;B2;B1
+78283;Grandchamp;78;Île-de-France;B2;B1
+78285;Gressey;78;Île-de-France;B2;B1
+78289;Grosrouvre;78;Île-de-France;B2;B1
+78300;Hargeville;78;Île-de-France;B2;B1
+78305;Herbeville;78;Île-de-France;B2;B1
+78310;Houdan;78;Île-de-France;B1;A
+78311;Houilles;78;Île-de-France;A;Abis
+78322;Jouy-en-Josas;78;Île-de-France;A;Abis
+78325;Jumeauville;78;Île-de-France;B2;B1
+78349;Longvilliers;78;Île-de-France;B2;B1
+78350;Louveciennes;78;Île-de-France;A;Abis
+78364;Marcq;78;Île-de-France;B2;B1
+78367;Mareil-Marly;78;Île-de-France;A;Abis
+78368;Mareil-sur-Mauldre;78;Île-de-France;B2;B1
+78380;Maule;78;Île-de-France;B1;A
+78381;Maulette;78;Île-de-France;B2;B1
+78396;Le Mesnil-le-Roi;78;Île-de-France;A;Abis
+78398;Les Mesnuls;78;Île-de-France;B1;A
+78404;Millemont;78;Île-de-France;B2;B1
+78406;Milon-la-Chapelle;78;Île-de-France;B1;A
+78415;Montainville;78;Île-de-France;B2;B1
+78420;Montfort-l'Amaury;78;Île-de-France;B1;A
+78455;Noisy-le-Roi;78;Île-de-France;B1;Abis
+78465;Orgerus;78;Île-de-France;B2;B1
+78475;Osmoy;78;Île-de-France;B2;B1
+78486;Le Perray-en-Yvelines;78;Île-de-France;B1;A
+78505;Prunay-le-Temple;78;Île-de-France;B2;B1
+78513;La Queue-les-Yvelines;78;Île-de-France;B2;B1
+78518;Rennemoulin;78;Île-de-France;B1;Abis
+78520;Richebourg;78;Île-de-France;B2;B1
+78522;Rochefort-en-Yvelines;78;Île-de-France;B2;B1
+78530;Rosay;78;Île-de-France;B2;B1
+78537;Saint-Arnoult-en-Yvelines;78;Île-de-France;B2;B1
+78561;Saint-Lambert;78;Île-de-France;B1;A
+78565;Saint-Martin-des-Champs;78;Île-de-France;B2;B1
+78571;Saint-Nom-la-Bretèche;78;Île-de-France;B1;A
+78591;Septeuil;78;Île-de-France;B2;B1
+78605;Tacoignières;78;Île-de-France;B2;B1
+78616;Thoiry;78;Île-de-France;B2;B1
+78620;Toussus-le-Noble;78;Île-de-France;B1;A
+78655;Vieille-Église-en-Yvelines;78;Île-de-France;B2;A
+78677;Villette;78;Île-de-France;B2;B1
+78681;Villiers-le-Mahieu;78;Île-de-France;B2;B1
+81271;Saint-Sulpice-la-Pointe;81;Occitanie;C;B1
+83032;Carcès;83;Provence-Alpes-Côte d'Azur;C;B1
+83046;Cotignac;83;Provence-Alpes-Côte d'Azur;C;B1
+83055;Fayence;83;Provence-Alpes-Côte d'Azur;B1;A
+83064;Garéoult;83;Provence-Alpes-Côte d'Azur;B2;B1
+83065;Gassin;83;Provence-Alpes-Côte d'Azur;A;Abis
+83081;Montauroux;83;Provence-Alpes-Côte d'Azur;B1;A
+83089;Ollières;83;Provence-Alpes-Côte d'Azur;C;B1
+83092;Pignans;83;Provence-Alpes-Côte d'Azur;B2;B1
+83093;Plan-d'Aups-Sainte-Baume;83;Provence-Alpes-Côte d'Azur;B2;B1
+83094;Le Plan-de-la-Tour;83;Provence-Alpes-Côte d'Azur;B1;A
+83096;Pourcieux;83;Provence-Alpes-Côte d'Azur;C;B1
+83100;Puget-Ville;83;Provence-Alpes-Côte d'Azur;B2;B1
+83101;Ramatuelle;83;Provence-Alpes-Côte d'Azur;A;Abis
+83106;Rocbaron;83;Provence-Alpes-Côte d'Azur;B2;B1
+83110;Rougiers;83;Provence-Alpes-Côte d'Azur;C;B1
+83117;Saint-Paul-en-Forêt;83;Provence-Alpes-Côte d'Azur;B2;B1
+83124;Seillans;83;Provence-Alpes-Côte d'Azur;C;B1
+83125;Seillons-Source-d'Argens;83;Provence-Alpes-Côte d'Azur;C;B1
+83140;Tourves;83;Provence-Alpes-Côte d'Azur;C;B1
+83150;Vinon-sur-Verdon;83;Provence-Alpes-Côte d'Azur;B2;B1
+84065;Lauris;84;Provence-Alpes-Côte d'Azur;C;B1
+84124;Saumane-de-Vaucluse;84;Provence-Alpes-Côte d'Azur;B2;B1
+84139;Fontaine-de-Vaucluse;84;Provence-Alpes-Côte d'Azur;C;B1
+85001;L'Aiguillon-la-Presqu'île;85;Pays de la Loire;C;B1
+85012;La Barre-de-Monts;85;Pays de la Loire;B2;B1
+85114;Jard-sur-Mer;85;Pays de la Loire;B2;B1
+85127;Longeville-sur-Mer;85;Pays de la Loire;C;B1
+85164;Notre-Dame-de-Monts;85;Pays de la Loire;B2;B1
+85191;La Roche-sur-Yon;85;Pays de la Loire;B2;B1
+85278;Saint-Vincent-sur-Jard;85;Pays de la Loire;B2;B1
+91017;Angervilliers;91;Île-de-France;B2;B1
+91064;Bièvres;91;Île-de-France;A;Abis
+91100;Bouville;91;Île-de-France;B2;B1
+91148;Chauffour-lès-Étréchy;91;Île-de-France;B2;B1
+91180;Courances;91;Île-de-France;B2;B1
+91195;Dannemois;91;Île-de-France;B2;B1
+91359;Maisse;91;Île-de-France;B2;B1
+91376;Marolles-en-Hurepoix;91;Île-de-France;B1;A
+91405;Milly-la-Forêt;91;Île-de-France;B2;B1
+91408;Moigny-sur-École;91;Île-de-France;B2;B1
+91412;Mondeville;91;Île-de-France;B2;B1
+91463;Oncy-sur-École;91;Île-de-France;B2;B1
+91473;Orveau;91;Île-de-France;B2;B1
+91508;Puiselet-le-Marais;91;Île-de-France;B2;B1
+91546;Saint-Cyr-sous-Dourdan;91;Île-de-France;B2;B1
+91629;Valpuiseaux;91;Île-de-France;B2;B1
+91630;Le Val-Saint-Germain;91;Île-de-France;B2;B1
+91635;Vauhallan;91;Île-de-France;A;Abis
+91645;Verrières-le-Buisson;91;Île-de-France;A;Abis
+91654;Videlles;91;Île-de-France;B2;B1
+92036;Gennevilliers;92;Île-de-France;A;Abis
+92078;Villeneuve-la-Garenne;92;Île-de-France;A;Abis
+93063;Romainville;93;Île-de-France;A;Abis
+94002;Alfortville;94;Île-de-France;A;Abis
+95023;Arronville;95;Île-de-France;B2;B1
+95040;Avernes;95;Île-de-France;B2;B1
+95055;Bellefontaine;95;Île-de-France;B2;B1
+95056;Belloy-en-France;95;Île-de-France;B2;B1
+95144;Châtenay-en-France;95;Île-de-France;B2;B1
+95169;Commeny;95;Île-de-France;B2;B1
+95177;Cormeilles-en-Vexin;95;Île-de-France;B2;B1
+95214;Épinay-Champlâtreux;95;Île-de-France;B2;B1
+95254;Frémécourt;95;Île-de-France;B2;B1
+95316;Jagny-sous-Bois;95;Île-de-France;B2;B1
+95331;Lassy;95;Île-de-France;B2;B1
+95355;Magny-en-Vexin;95;Île-de-France;B2;B1
+95365;Mareil-en-France;95;Île-de-France;B2;B1
+95387;Menouville;95;Île-de-France;B2;B1
+95483;Le Perchay;95;Île-de-France;B2;B1
+95493;Le Plessis-Luzarches;95;Île-de-France;B2;B1
+95566;Saint-Martin-du-Tertre;95;Île-de-France;B2;B1
+95584;Santeuil;95;Île-de-France;B2;B1
+95610;Théméricourt;95;Île-de-France;B2;B1
+95611;Theuville;95;Île-de-France;B2;B1
+95625;Us;95;Île-de-France;B2;B1
+95658;Vigny;95;Île-de-France;B2;B1
+95660;Villaines-sous-Bois;95;Île-de-France;B2;B1
+95682;Villiers-le-Sec;95;Île-de-France;B2;B1
+97202;Les Anses-d'Arlet;972;Martinique;B1;A
+97206;Le Diamant;972;Martinique;B1;A
