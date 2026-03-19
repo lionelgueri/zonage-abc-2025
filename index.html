@@ -346,14 +346,12 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png
   opacity: 0.4,
 }).addTo(map);
 
-// Calque labels uniquement — ajouté APRÈS le GeoJSON pour passer par-dessus
-// CartoDB gère automatiquement les noms affichés selon le niveau de zoom :
-//   zoom 6  → grandes métropoles seulement
-//   zoom 8  → villes moyennes
-//   zoom 11+ → villages et communes
+// Calque labels uniquement — visible à partir du zoom 8 uniquement
+// (en dessous, CartoDB affiche les noms de régions en anglais)
+// À partir du zoom 8, les noms de villes sont correctement en français
 const labelsLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png', {
   opacity: 1,
-  pane: 'shadowPane', // pane au-dessus des polygones mais standard dans Leaflet
+  minZoom: 8,
 });
 
 // ─────────────────────────────────────────────
