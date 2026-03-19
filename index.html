@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zonage ABC des Communes — France 2025</title>
+
+  <!-- Leaflet CSS (cartographie interactive, gratuit) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #1a1a2e;
+      color: #eee;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── En-tête ── */
+    #header {
+      background: #16213e;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+
+    #header h1 {
+      font-size: 1rem;
+      color: #e94560;
+      white-space: nowrap;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Barre de recherche ── */
+    #search-container {
+      position: relative;
+      flex: 1;
+      max-width: 380px;
+    }
+
+    #search-input {
+      width: 100%;
+      padding: 7px 12px;
+      border: 1px solid #334;
+      border-radius: 6px;
+      background: #0f3460;
+      color: white;
+      font-size: 0.88rem;
+      outline: none;
+      transition: border 0.2s;
+    }
+    #search-input:focus { border-color: #e94560; }
+    #search-input::placeholder { color: #6677aa; }
+
+    #search-results {
+      position: absolute;
+      top: calc(100% + 2px);
+      left: 0; right: 0;
+      background: #16213e;
+      border: 1px solid #334;
+      border-radius: 0 0 6px 6px;
+      z-index: 9999;
+      max-height: 220px;
+      overflow-y: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    .search-result {
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: 0.83rem;
+      border-bottom: 1px solid #223;
+      transition: background 0.15s;
+    }
+    .search-result:hover { background: #0f3460; }
+    .search-result:last-child { border-bottom: none; }
+
+    /* ── Carte ── */
+    #map { flex: 1; }
+
+    /* ── Panneau de chargement ── */
+    #loading {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(22, 33, 62, 0.97);
+      border: 1px solid #334;
+      border-radius: 14px;
+      padding: 30px 40px;
+      text-align: center;
+      z-index: 3000;
+      min-width: 260px;
+    }
+
+    .spinner {
+      width: 44px; height: 44px;
+      border: 3px solid #223;
+      border-top: 3px solid #e94560;
+      border-radius: 50%;
+      animation: spin 0.9s linear infinite;
+      margin: 0 auto 14px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    #loading h3 { font-size: 1rem; margin-bottom: 6px; }
+    #loading p  { font-size: 0.8rem; color: #8899bb; margin-top: 6px; }
+
+    #progress-bar-track {
+      width: 200px;
+      height: 4px;
+      background: #223;
+      border-radius: 2px;
+      margin: 10px auto 0;
+      overflow: hidden;
+    }
+    #progress-bar {
+      height: 100%;
+      background: #e94560;
+      border-radius: 2px;
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    /* ── Légende ── */
+    #legend {
+      position: absolute;
+      bottom: 36px; right: 10px;
+      background: rgba(22, 33, 62, 0.95);
+      border: 1px solid #334;
+      border-radius: 10px;
+      padding: 12px 16px;
+      z-index: 1000;
+      min-width: 155px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    #legend h3 {
+      font-size: 0.68rem;
+      color: #6677aa;
+      margin-bottom: 9px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 7px;
+      font-size: 0.83rem;
+    }
+    .legend-item:last-child { margin-bottom: 0; }
+
+    .legend-color {
+      width: 22px; height: 13px;
+      border-radius: 3px;
+      flex-shrink: 0;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    /* ── Panneau d'info commune ── */
+    #info-panel {
+      position: absolute;
+      top: 68px; right: 10px;
+      background: rgba(22, 33, 62, 0.97);
+      border: 1px solid #334;
+      border-radius: 10px;
+      padding: 14px 16px;
+      z-index: 1000;
+      min-width: 190px;
+      max-width: 240px;
+      display: none;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    }
+
+    #info-panel .close-btn {
+      float: right;
+      cursor: pointer;
+      color: #556;
+      font-size: 1rem;
+      line-height: 1;
+      margin-top: -2px;
+    }
+    #info-panel .close-btn:hover { color: #e94560; }
+
+    .zone-badge {
+      display: inline-block;
+      padding: 3px 11px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .commune-name { font-size: 0.95rem; font-weight: 600; margin-bottom: 3px; }
+    .commune-dep  { font-size: 0.78rem; color: #7788aa; }
+
+    .reclassement-tag {
+      margin-top: 9px;
+      padding: 5px 9px;
+      background: rgba(233, 69, 96, 0.15);
+      border-left: 3px solid #e94560;
+      border-radius: 0 4px 4px 0;
+      font-size: 0.75rem;
+      color: #e94560;
+    }
+
+    /* ── Statut et source ── */
+    #status {
+      font-size: 0.73rem;
+      color: #556677;
+      white-space: nowrap;
+    }
+
+    .source-info {
+      position: absolute;
+      bottom: 36px; left: 10px;
+      font-size: 0.65rem;
+      color: #445;
+      z-index: 1000;
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ════════════════════════════════════════════
+     EN-TÊTE
+     ════════════════════════════════════════════ -->
+<div id="header">
+  <h1>🗺 Zonage ABC — France 2025</h1>
+
+  <div id="search-container">
+    <input
+      type="text"
+      id="search-input"
+      placeholder="Rechercher une commune…"
+      autocomplete="off"
+    />
+    <div id="search-results"></div>
+  </div>
+
+  <span id="status">Chargement…</span>
+</div>
+
+<!-- ════════════════════════════════════════════
+     CARTE
+     ════════════════════════════════════════════ -->
+<div id="map"></div>
+
+<!-- ════════════════════════════════════════════
+     CHARGEMENT
+     ════════════════════════════════════════════ -->
+<div id="loading">
+  <div class="spinner"></div>
+  <h3>Chargement des données</h3>
+  <p id="loading-text">Initialisation…</p>
+  <div id="progress-bar-track"><div id="progress-bar"></div></div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     LÉGENDE
+     ════════════════════════════════════════════ -->
+<div id="legend">
+  <h3>Zonage ABC 2025</h3>
+  <div class="legend-item">
+    <div class="legend-color" style="background:#c0392b"></div><span>Zone A bis</span>
+  </div>
+  <div class="legend-item">
+    <div class="legend-color" style="background:#e67e22"></div><span>Zone A</span>
+  </div>
+  <div class="legend-item">
+    <div class="legend-color" style="background:#f1c40f"></div><span>Zone B1</span>
+  </div>
+  <div class="legend-item">
+    <div class="legend-color" style="background:#2ecc71"></div><span>Zone B2</span>
+  </div>
+  <div class="legend-item">
+    <div class="legend-color" style="background:#ffffff; border:1px solid #999"></div><span>Zone C</span>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     PANNEAU INFO COMMUNE
+     ════════════════════════════════════════════ -->
+<div id="info-panel">
+  <span class="close-btn" onclick="closeInfo()">✕</span>
+  <div>
+    <span class="zone-badge" id="info-zone">?</span>
+    <div class="commune-name" id="info-name">—</div>
+    <div class="commune-dep"  id="info-dep">—</div>
+    <div class="reclassement-tag" id="info-reclassement" style="display:none">
+      ↕ Reclassée au 5 septembre 2025
+    </div>
+  </div>
+</div>
+
+<div class="source-info">
+  Sources : data.gouv.fr (arrêté du 5 sept. 2025) · OpenDataSoft / IGN (contours communes)
+</div>
+
+<!-- ════════════════════════════════════════════
+     SCRIPTS
+     ════════════════════════════════════════════ -->
+<!-- Leaflet (cartographie) -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<!-- PapaParse (lecture CSV) -->
+<script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
+
+<script>
+// ─────────────────────────────────────────────
+// CONFIGURATION DES COULEURS PAR ZONE
+// ─────────────────────────────────────────────
+const ZONES = {
+  'Abis': { fill: '#9800E7', stroke: '#7000ab', label: 'Zone A bis' },
+  'A':    { fill: '#F10000', stroke: '#b50000', label: 'Zone A'     },
+  'B1':   { fill: '#FFA600', stroke: '#c07d00', label: 'Zone B1'    },
+  'B2':   { fill: '#ABE300', stroke: '#7faa00', label: 'Zone B2'    },
+  'C':    { fill: '#FFFFFF', stroke: '#cccccc', label: 'Zone C'     },
+};
+
+// ─────────────────────────────────────────────
+// INITIALISATION DE LA CARTE LEAFLET
+// ─────────────────────────────────────────────
+const map = L.map('map', {
+  center: [46.5, 2.3],
+  zoom: 6,
+  preferCanvas: true,   // meilleure performance pour beaucoup de polygones
+  zoomControl: true,
+});
+
+// Fond de carte OpenStreetMap (100 % gratuit, pas de clé API)
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  opacity: 0.25,
+}).addTo(map);
+
+// ─────────────────────────────────────────────
+// STOCKAGE DES DONNÉES
+// ─────────────────────────────────────────────
+let zoneData    = {};   // { "01001": { name, zone, dep, reclassement } }
+let geojsonLayer = null;
+
+// ─────────────────────────────────────────────
+// CHARGEMENT PRINCIPAL
+// ─────────────────────────────────────────────
+async function loadAll() {
+  try {
+    // Étape 1 : CSV des zones 2025
+    setStatus('Téléchargement du zonage 2025…', 10);
+    await loadZoneCSV();
+
+    // Étape 2 : GeoJSON des contours de communes
+    setStatus('Téléchargement des contours (peut prendre 1 à 2 min sur connexion lente)…', 40);
+    await loadGeoJSON();
+
+    hideLoading();
+    document.getElementById('status').textContent =
+      `${Object.keys(zoneData).length.toLocaleString()} communes · 2025`;
+
+  } catch (err) {
+    document.getElementById('loading-text').textContent =
+      '❌ Erreur de chargement. Vérifiez votre connexion internet et rechargez la page.';
+    document.getElementById('progress-bar').style.background = '#e94560';
+    console.error(err);
+  }
+}
+
+// ─────────────────────────────────────────────
+// ÉTAPE 1 : Chargement du CSV des zones 2025
+// (source officielle : data.gouv.fr)
+// ─────────────────────────────────────────────
+function loadZoneCSV() {
+  return new Promise((resolve, reject) => {
+    // URL directe vers le fichier CSV de l'arrêté du 5 septembre 2025
+    const csvUrl = 'https://www.data.gouv.fr/api/1/datasets/r/13f7282b-8a25-43ab-9713-8bb4e476df55';
+
+    Papa.parse(csvUrl, {
+      download: true,
+      header: true,
+      skipEmptyLines: true,
+      complete: ({ data }) => {
+        data.forEach(row => {
+          // Les colonnes du CSV 2025 (adapter si besoin selon le fichier réel)
+          const code        = (row['CODGEO']  || row['Code commune'] || '').trim();
+          const zone        = (row['Zonage en vigueur depuis le 5 septembre 2025']
+                              || row['Zonage'] || '').trim();
+          const name        = (row['LIBGEO']  || row['Nom commune']  || '').trim();
+          const dep         = (row['DEP']     || '').trim();
+          const reclasse    = (row['Reclassement 5 septembre 2025'] || '').trim();
+
+          if (code && zone) {
+            zoneData[code] = { name, zone, dep, reclassement: reclasse === 'Oui' };
+          }
+        });
+        console.log(`✅ CSV chargé : ${Object.keys(zoneData).length} communes`);
+        setStatus('Zonage 2025 chargé ✓', 35);
+        resolve();
+      },
+      error: reject,
+    });
+  });
+}
+
+// ─────────────────────────────────────────────
+// ÉTAPE 2 : Chargement du GeoJSON des contours
+// Source officielle et pérenne : OpenDataSoft / IGN
+// Données publiques, open data, pas de dépendance repo tiers
+// ─────────────────────────────────────────────
+async function loadGeoJSON() {
+  // API OpenDataSoft — dataset officiel georef-france-commune (IGN)
+  // On sélectionne uniquement les champs utiles pour alléger le transfert
+  const url =
+    'https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/georef-france-commune/exports/geojson' +
+    '?select=com_code,com_name,geo_shape&timezone=Europe%2FParis';
+
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+  setStatus('Analyse du GeoJSON…', 75);
+  const geojson = await response.json();
+
+  setStatus('Rendu de la carte…', 90);
+  renderMap(geojson);
+}
+
+// ─────────────────────────────────────────────
+// RENDU DE LA CARTE
+// ─────────────────────────────────────────────
+function renderMap(geojson) {
+  geojsonLayer = L.geoJSON(geojson, {
+    style: getStyle,
+    onEachFeature: bindEvents,
+  }).addTo(map);
+}
+
+// Retourne le code INSEE depuis les propriétés GeoJSON OpenDataSoft
+// com_code peut être une chaîne "75056" ou un tableau ["75056"] selon l'API
+function getInseeCode(props) {
+  const raw = props.com_code || props.code || props.INSEE_COM || props.CODGEO || '';
+  // Si tableau (format OpenDataSoft), prendre le premier élément
+  return Array.isArray(raw) ? (raw[0] || '') : String(raw);
+}
+
+function getStyle(feature) {
+  const code = getInseeCode(feature.properties);
+  const data = zoneData[code];
+
+  if (!data) {
+    return { fillColor: '#FFFFFF', weight: 0.3, color: '#cccccc', fillOpacity: 0.6 };
+  }
+
+  const z = ZONES[data.zone];
+  if (!z) {
+    return { fillColor: '#FFFFFF', weight: 0.3, color: '#cccccc', fillOpacity: 0.6 };
+  }
+
+  return {
+    fillColor:   z.fill,
+    fillOpacity: 0.78,
+    color:       z.stroke,
+    weight:      0.4,
+    opacity:     0.9,
+  };
+}
+
+function bindEvents(feature, layer) {
+  layer.on({
+    mouseover: onMouseOver,
+    mouseout:  onMouseOut,
+    click:     onClickCommune,
+  });
+}
+
+function onMouseOver(e) {
+  e.target.setStyle({ weight: 2, color: '#fff', fillOpacity: 0.95 });
+  e.target.bringToFront();
+}
+
+function onMouseOut(e) {
+  geojsonLayer.resetStyle(e.target);
+}
+
+function onClickCommune(e) {
+  const props = e.target.feature.properties;
+  const code  = getInseeCode(props);
+  const data  = zoneData[code];
+
+  const panel = document.getElementById('info-panel');
+  const badge = document.getElementById('info-zone');
+  const nameEl = document.getElementById('info-name');
+  const depEl  = document.getElementById('info-dep');
+  const reclEl = document.getElementById('info-reclassement');
+
+  if (data) {
+    const z = ZONES[data.zone];
+    badge.textContent    = data.zone === 'Abis' ? 'A bis' : `Zone ${data.zone}`;
+    badge.style.background = z ? z.fill : '#555';
+    // com_name peut aussi être un tableau dans l'API OpenDataSoft
+    const comName = Array.isArray(props.com_name) ? props.com_name[0] : (props.com_name || '');
+    nameEl.textContent   = data.name || comName || code;
+    depEl.textContent    = `Département ${data.dep} · Code INSEE : ${code}`;
+    reclEl.style.display = data.reclassement ? 'block' : 'none';
+  } else {
+    badge.textContent    = 'Non classée';
+    badge.style.background = '#aaa';
+    badge.style.color = '#333';
+    const comName2 = Array.isArray(props.com_name) ? props.com_name[0] : (props.com_name || '');
+    nameEl.textContent   = comName2 || code || 'Commune inconnue';
+    depEl.textContent    = 'Aucune donnée de zonage disponible';
+    reclEl.style.display = 'none';
+  }
+
+  panel.style.display = 'block';
+  L.DomEvent.stopPropagation(e);
+}
+
+function closeInfo() {
+  document.getElementById('info-panel').style.display = 'none';
+}
+
+// Fermer le panneau au clic sur la carte (hors commune)
+map.on('click', closeInfo);
+
+// ─────────────────────────────────────────────
+// RECHERCHE D'ADRESSE / COMMUNE
+// (API Adresse officielle — data.gouv.fr)
+// ─────────────────────────────────────────────
+let searchTimer;
+
+document.getElementById('search-input').addEventListener('input', function () {
+  clearTimeout(searchTimer);
+  const query = this.value.trim();
+  if (query.length < 2) {
+    clearResults();
+    return;
+  }
+  searchTimer = setTimeout(() => searchAddress(query), 280);
+});
+
+async function searchAddress(query) {
+  const url =
+    `https://api-adresse.data.gouv.fr/search/?q=${encodeURIComponent(query)}&type=municipality&limit=7`;
+
+  try {
+    const res  = await fetch(url);
+    const json = await res.json();
+    showResults(json.features || []);
+  } catch {
+    clearResults();
+  }
+}
+
+function showResults(features) {
+  const container = document.getElementById('search-results');
+  container.innerHTML = '';
+
+  if (!features.length) return;
+
+  features.forEach(f => {
+    const code     = f.properties.citycode || '';
+    const zoneInfo = zoneData[code];
+    const z        = zoneInfo ? ZONES[zoneInfo.zone] : null;
+
+    const div = document.createElement('div');
+    div.className = 'search-result';
+
+    const zonePart = z
+      ? `&ensp;<span style="color:${z.fill};font-weight:700">${
+          zoneInfo.zone === 'Abis' ? 'A bis' : zoneInfo.zone
+        }</span>`
+      : '';
+
+    div.innerHTML = `${f.properties.label}${zonePart}`;
+
+    div.addEventListener('click', () => {
+      const [lng, lat] = f.geometry.coordinates;
+      map.flyTo([lat, lng], 13, { duration: 1 });
+      document.getElementById('search-input').value = f.properties.label;
+      clearResults();
+    });
+
+    container.appendChild(div);
+  });
+}
+
+function clearResults() {
+  document.getElementById('search-results').innerHTML = '';
+}
+
+// Clic ailleurs → ferme les résultats
+document.addEventListener('click', e => {
+  if (!e.target.closest('#search-container')) clearResults();
+});
+
+// ─────────────────────────────────────────────
+// UTILITAIRES
+// ─────────────────────────────────────────────
+function setStatus(text, pct) {
+  document.getElementById('loading-text').textContent = text;
+  document.getElementById('progress-bar').style.width = pct + '%';
+}
+
+function hideLoading() {
+  document.getElementById('loading').style.display = 'none';
+}
+
+// ─────────────────────────────────────────────
+// DÉMARRAGE
+// ─────────────────────────────────────────────
+loadAll();
+</script>
+
+</body>
+</html>
