@@ -17,7 +17,7 @@ Carte interactive du zonage ABC de toutes les communes françaises, mise à jour
 | 🟣 | **A bis** | Paris, 97 autres communes d'Île-de-France (Essonne, Yvelines, Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne, Val-d'Oise) et 36 communes en Province (Ain, Alpes-Maritimes, Bouches-du-Rhône, Oise, Haute-Savoie, Var). |
 | 🔴 | **A** | Agglomération de Paris (dont zone A bis), Côte d'Azur, agglomération genevoise française, grandes métropoles (Lille, Strasbourg, Lyon, Marseille, Montpellier, Toulouse, Bordeaux, Nantes, Rennes) et 10 communes d'outre-mer à loyers très élevés. |
 | 🟠 | **B1** | Grandes agglomérations à loyers élevés, partie de la grande couronne parisienne hors A bis/A, villes tendues de Province, communes d'outre-mer hors zone A. |
-| 🟡 | **B2** | Villes-centre de certaines agglomérations, grande couronne parisienne hors A bis/A/B1, communes à loyers assez élevés, Corse hors A/B1. |
+| 🟢 | **B2** | Villes-centre de certaines agglomérations, grande couronne parisienne hors A bis/A/B1, communes à loyers assez élevés, Corse hors A/B1. |
 | ⚪ | **C** | Reste du territoire. |
 
 Les communes **reclassées** au 5 septembre 2025 sont signalées lors du clic sur la commune.
