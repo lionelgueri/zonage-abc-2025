@@ -319,31 +319,60 @@
 <script src="https://unpkg.com/topojson-client@3/dist/topojson-client.min.js"></script>
 
 <script>
-// ─────────────────────────────────────────────
-// CONFIGURATION DES COULEURS PAR ZONE
-// ─────────────────────────────────────────────
-const ZONES = {
-  'Abis': { fill: '#9800E7', stroke: '#7000ab', label: 'Zone A bis' },
-  'A':    { fill: '#F10000', stroke: '#b50000', label: 'Zone A'     },
-  'B1':   { fill: '#FFA600', stroke: '#c07d00', label: 'Zone B1'    },
-  'B2':   { fill: '#ABE300', stroke: '#7faa00', label: 'Zone B2'    },
-  'C':    { fill: '#FFFFFF', stroke: '#cccccc', label: 'Zone C'     },
+// ═══════════════════════════════════════════════════════════════
+//  CONFIGURATION — tous les paramètres modifiables sont ici
+// ═══════════════════════════════════════════════════════════════
+
+const CONFIG = {
+
+  // --- Carte : position et zoom au démarrage ---
+  carte: {
+    centre:       [46.5, 2.3],  // [latitude, longitude] du centre initial
+    zoomInitial:  6,             // niveau de zoom au démarrage (1=monde, 18=rue)
+    zoomMinLabels: 6,            // à partir de quel zoom les noms de villes apparaissent
+  },
+
+  // --- Couleurs des zones (fill = remplissage, stroke = bordure) ---
+  zones: {
+    'Abis': { fill: '#9800E7', stroke: '#7000ab', label: 'Zone A bis' },
+    'A':    { fill: '#F10000', stroke: '#b50000', label: 'Zone A'     },
+    'B1':   { fill: '#FFA600', stroke: '#c07d00', label: 'Zone B1'    },
+    'B2':   { fill: '#ABE300', stroke: '#7faa00', label: 'Zone B2'    },
+    'C':    { fill: '#FFFFFF', stroke: '#cccccc', label: 'Zone C'     },
+  },
+
+  // --- Opacité des communes (0 = transparent, 1 = opaque) ---
+  opaciteZones: 0.78,
+
+  // --- Fond de carte (opacité du fond gris derrière les zones) ---
+  opaciteFond: 0.4,
+
+  // --- Fichier de données (chemin relatif depuis index.html) ---
+  fichierDonnees: './data/communes-2025.topo.json',
+
 };
+
+// ═══════════════════════════════════════════════════════════════
+//  FIN DE LA CONFIGURATION — ne pas modifier en dessous
+// ═══════════════════════════════════════════════════════════════
+
+// Raccourci utilisé dans le reste du code
+const ZONES = CONFIG.zones;
 
 // ─────────────────────────────────────────────
 // INITIALISATION DE LA CARTE LEAFLET
 // ─────────────────────────────────────────────
 const map = L.map('map', {
-  center: [46.5, 2.3],
-  zoom: 6,
-  preferCanvas: true,   // meilleure performance pour beaucoup de polygones
-  zoomControl: true,
+  center:       CONFIG.carte.centre,
+  zoom:         CONFIG.carte.zoomInitial,
+  preferCanvas: true,
+  zoomControl:  true,
 });
 
 // Fond neutre très discret (base grise CartoDB)
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
   attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · © <a href="https://carto.com/">CARTO</a>',
-  opacity: 0.4,
+  opacity: CONFIG.opaciteFond,
 }).addTo(map);
 
 // Pane personnalisé au-dessus des polygones GeoJSON (overlayPane = 400)
@@ -353,8 +382,8 @@ map.getPane('labelsPane').style.zIndex = 450;
 map.getPane('labelsPane').style.pointerEvents = 'none';
 
 const labelsLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png', {
-  pane: 'labelsPane',
-  minZoom: 6,
+  pane:    'labelsPane',
+  minZoom: CONFIG.carte.zoomMinLabels,
 });
 
 // ─────────────────────────────────────────────
@@ -371,7 +400,7 @@ let geojsonLayer = null;
 async function loadAll() {
   try {
     setStatus('Chargement des données…', 20);
-    const response = await fetch('./data/communes-2025.topo.json');
+    const response = await fetch(CONFIG.fichierDonnees);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
     setStatus('Décompression…', 60);
@@ -426,7 +455,7 @@ function getStyle(feature) {
 
   return {
     fillColor:   z.fill,
-    fillOpacity: 0.78,
+    fillOpacity: CONFIG.opaciteZones,
     color:       z.stroke,
     weight:      0.4,
     opacity:     0.9,
