@@ -1,38 +1,51 @@
-// Script de construction du fichier de données optimisé
-// Sources :
-//   - Contours simplifiés : francoisburdy/zones-abc-pinel-map (MIT)
-//   - Données zonage     : data.gouv.fr / arrêté 5 sept. 2025 (open data officiel)
-// Résultat : un seul fichier TopoJSON fusionné, hébergé sur votre propre GitHub
-// Exécution : node build-data.mjs
+// ═══════════════════════════════════════════════════════════════
+//  build-data.mjs — Script de régénération des données
+//
+//  Utilise uniquement les fichiers locaux du dossier data/ :
+//    - communes-2025.topo.json  → source des contours géographiques
+//    - liste-des-communes-*.csv → source officielle du zonage ABC
+//
+//  Usage : node build-data.mjs
+//  Résultat : data/communes-2025.topo.json mis à jour
+// ═══════════════════════════════════════════════════════════════
 
-import { topology } from 'topojson-server';
-import fs from 'fs';
+import { topology }  from 'topojson-server';
+import { feature  }  from 'topojson-client';
+import fs            from 'fs';
+import path          from 'path';
 
-const GEOJSON_URL =
-  'https://raw.githubusercontent.com/francoisburdy/zones-abc-pinel-map/main/data/communes-simplified-geojson.json';
+// ── Chemins des fichiers (relatifs à ce script) ───────────────
+const FICHIER_TOPO = './data/communes-2025.topo.json';
+const FICHIER_CSV  = './data/liste-des-communes-zonage-abc-5-septembre-2025.csv';
+const FICHIER_OUT  = './data/communes-2025.topo.json'; // écrase l'existant
 
-const CSV_URL =
-  'https://www.data.gouv.fr/api/1/datasets/r/13f7282b-8a25-43ab-9713-8bb4e476df55';
+// ─────────────────────────────────────────────────────────────
+// ÉTAPE 1 : Lecture et parsing du CSV local
+// ─────────────────────────────────────────────────────────────
+console.log(`📂 Lecture du CSV : ${FICHIER_CSV}`);
 
-// ── 1. Téléchargement CSV officiel 2025 ───────────────────────
-console.log('📥 Téléchargement du CSV zonage 2025 (data.gouv.fr)...');
-const csvRes  = await fetch(CSV_URL);
-const csvText = await csvRes.text();
+if (!fs.existsSync(FICHIER_CSV)) {
+  console.error(`❌ Fichier introuvable : ${FICHIER_CSV}`);
+  console.error('   → Placez le CSV officiel dans le dossier data/ et relancez.');
+  process.exit(1);
+}
 
+const csvText = fs.readFileSync(FICHIER_CSV, 'utf-8');
 const lines   = csvText.split('\n').filter(l => l.trim());
 const sep     = lines[0].includes(';') ? ';' : ',';
 const headers = lines[0].split(sep).map(h => h.trim().replace(/^"|"$/g, ''));
-console.log('  Colonnes :', headers.join(' | '));
+
+console.log(`   Colonnes détectées : ${headers.join(' | ')}`);
+
+const idxCode = headers.findIndex(h => h === 'CODGEO');
+const idxZone = headers.findIndex(h => h.startsWith('Zonage'));
+const idxDep  = headers.findIndex(h => h === 'DEP');
+const idxRecl = headers.findIndex(h => h.startsWith('Reclassement'));
 
 const zoneData = {};
 for (let i = 1; i < lines.length; i++) {
   const cols = lines[i].split(sep).map(c => c.trim().replace(/^"|"$/g, ''));
   if (cols.length < 3) continue;
-
-  const idxCode = headers.findIndex(h => h === 'CODGEO');
-  const idxZone = headers.findIndex(h => h.startsWith('Zonage'));
-  const idxDep  = headers.findIndex(h => h === 'DEP');
-  const idxRecl = headers.findIndex(h => h.startsWith('Reclassement'));
 
   const code = (cols[idxCode] || cols[0] || '').trim();
   const zone = (cols[idxZone] || cols[3] || '').trim();
@@ -40,31 +53,36 @@ for (let i = 1; i < lines.length; i++) {
   const recl = (cols[idxRecl] || cols[4] || '').trim();
 
   if (code && zone) {
-    zoneData[code] = {
-      z: zone,
-      d: dep,
-      r: recl === 'Oui' ? 1 : 0,
-    };
+    zoneData[code] = { z: zone, d: dep, r: recl === 'Oui' ? 1 : 0 };
   }
 }
-console.log(`  ✅ ${Object.keys(zoneData).length} communes chargées`);
+console.log(`   ✅ ${Object.keys(zoneData).length} communes chargées depuis le CSV`);
 
-// ── 2. Téléchargement GeoJSON simplifié ───────────────────────
-console.log('📥 Téléchargement du GeoJSON simplifié (~56 Mo)...');
-const geoRes  = await fetch(GEOJSON_URL);
-const geojson = await geoRes.json();
-console.log(`  ✅ ${geojson.features.length} features`);
+// ─────────────────────────────────────────────────────────────
+// ÉTAPE 2 : Lecture du TopoJSON existant (contours géographiques)
+// ─────────────────────────────────────────────────────────────
+console.log(`\n📂 Lecture du TopoJSON : ${FICHIER_TOPO}`);
 
-// ── 3. Fusion + réduction des propriétés ──────────────────────
-console.log('🔀 Fusion...');
+if (!fs.existsSync(FICHIER_TOPO)) {
+  console.error(`❌ Fichier introuvable : ${FICHIER_TOPO}`);
+  process.exit(1);
+}
+
+const topo   = JSON.parse(fs.readFileSync(FICHIER_TOPO, 'utf-8'));
+const geojson = feature(topo, topo.objects.communes); // TopoJSON → GeoJSON
+console.log(`   ✅ ${geojson.features.length} communes chargées depuis le TopoJSON`);
+
+// ─────────────────────────────────────────────────────────────
+// ÉTAPE 3 : Fusion des nouvelles données de zone
+// ─────────────────────────────────────────────────────────────
+console.log('\n🔀 Fusion des zones CSV dans les contours...');
+
 let matched = 0;
 for (const f of geojson.features) {
-  // Le GeoJSON source (OpenDataSoft) utilise "com_code" et "com_name"
-  const code = String(f.properties.com_code || f.properties.com_current_code || '');
-  const name = f.properties.com_name || '';
+  const code = f.properties.c || '';  // code INSEE déjà dans le TopoJSON
+  const name = f.properties.n || '';
   const zd   = zoneData[code] || {};
 
-  // On ne garde que le strict nécessaire (réduit la taille)
   f.properties = {
     c: code,
     n: name,
@@ -75,14 +93,17 @@ for (const f of geojson.features) {
 
   if (zd.z) matched++;
 }
-console.log(`  ✅ ${matched} / ${geojson.features.length} communes avec zone 2025`);
+console.log(`   ✅ ${matched} / ${geojson.features.length} communes avec zone`);
 
-// ── 4. Conversion TopoJSON (quantization = précision réduite) ─
-console.log('🗜  Conversion TopoJSON...');
-const topo = topology({ communes: geojson }, 1e5); // quantization 1e5
+// ─────────────────────────────────────────────────────────────
+// ÉTAPE 4 : Reconversion en TopoJSON et sauvegarde
+// ─────────────────────────────────────────────────────────────
+console.log('\n🗜  Reconversion en TopoJSON...');
+const topoOut  = topology({ communes: geojson }, 1e5);
+const jsonStr  = JSON.stringify(topoOut);
 
-const outPath = './communes-2025.topo.json';
-fs.writeFileSync(outPath, JSON.stringify(topo));
+fs.writeFileSync(FICHIER_OUT, jsonStr);
 
-const sizeMB = (fs.statSync(outPath).size / 1024 / 1024).toFixed(1);
-console.log(`\n✅ Fichier généré : ${outPath} (${sizeMB} Mo)`);
+const sizeMB = (fs.statSync(FICHIER_OUT).size / 1024 / 1024).toFixed(1);
+console.log(`\n✅ Fichier mis à jour : ${FICHIER_OUT} (${sizeMB} Mo)`);
+console.log('   → Uploadez ce fichier sur GitHub pour mettre à jour la carte.');
