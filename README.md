@@ -27,9 +27,13 @@ Les communes **reclassées** au 5 septembre 2025 sont signalées lors du clic su
 ## Fonctionnalités
 
 - Carte des **34 875 communes** françaises colorées par zone
+- **3 modes d'affichage** via les boutons de l'en-tête :
+  - **Zonage 2025** — carte colorée par zone (A bis, A, B1, B2, C)
+  - **Évolutions 2025** — communes modifiées par l'arrêté du 5 septembre 2025 (rouge = zone plus tendue, bleu = zone moins tendue)
+  - **Évolutions 2024** — communes modifiées par la révision de juillet 2024
 - **Recherche** par nom de commune avec affichage de la zone
 - **Labels des villes** adaptatifs selon le niveau de zoom
-- **Panneau d'information** au clic : nom, département, code INSEE, zone, reclassement
+- **Panneau d'information** au clic : nom, département, code INSEE, zone, reclassement (ou évolution avant/après en mode évolution)
 - Chargement rapide grâce au format **TopoJSON** pré-calculé (~8 Mo)
 
 <br>
