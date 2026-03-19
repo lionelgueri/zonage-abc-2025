@@ -414,8 +414,6 @@ function renderMap(geojson) {
 
   // Ajouter les labels CartoDB par-dessus les communes colorées
   labelsLayer.addTo(map);
-  // Rendre les labels noirs (le gris CartoDB devient quasi-noir)
-  labelsLayer.getContainer().style.filter = 'brightness(0.15)';
 }
 
 function getStyle(feature) {
