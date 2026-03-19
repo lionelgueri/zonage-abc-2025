@@ -351,7 +351,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png
 // À partir du zoom 8, les noms de villes sont correctement en français
 const labelsLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png', {
   opacity: 1,
-  minZoom: 8,
+  minZoom: 6,
 });
 
 // ─────────────────────────────────────────────
@@ -411,6 +411,8 @@ function renderMap(geojson) {
 
   // Ajouter les labels CartoDB par-dessus les communes colorées
   labelsLayer.addTo(map);
+  // Rendre les labels noirs (le gris CartoDB devient quasi-noir)
+  labelsLayer.getContainer().style.filter = 'brightness(0.15)';
 }
 
 function getStyle(feature) {
