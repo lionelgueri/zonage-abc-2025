@@ -184,6 +184,31 @@
       transition: width 0.3s ease;
     }
 
+    /* ── Crédit auteur ── */
+    #author-credit {
+      position: absolute;
+      bottom: 36px; left: 10px;
+      z-index: 1000;
+      background: rgba(22, 33, 62, 0.82);
+      backdrop-filter: blur(4px);
+      border-radius: 8px;
+      padding: 7px 11px;
+      font-size: 0.72rem;
+      color: #aabbcc;
+      line-height: 1.6;
+      pointer-events: auto;
+    }
+    #author-credit strong {
+      display: block;
+      color: #ddeeff;
+      font-size: 0.75rem;
+    }
+    #author-credit a {
+      color: #7aaadd;
+      text-decoration: none;
+    }
+    #author-credit a:hover { color: #fff; text-decoration: underline; }
+
     /* ── Légende ── */
     #legend {
       position: absolute;
@@ -369,6 +394,17 @@
   <h3>Chargement des données</h3>
   <p id="loading-text">Initialisation…</p>
   <div id="progress-bar-track"><div id="progress-bar"></div></div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     CRÉDIT AUTEUR
+     ════════════════════════════════════════════ -->
+<div id="author-credit">
+  <strong>Lionel Gueri</strong>
+  Consultant Data &amp; Business Intelligence<br>
+  <a href="https://www.linkedin.com/in/lionelgueri/" target="_blank" rel="noopener">LinkedIn</a>
+  &nbsp;·&nbsp;
+  <a href="https://xlbusinesstools.com/" target="_blank" rel="noopener">xlbusinesstools.com</a>
 </div>
 
 <!-- ════════════════════════════════════════════
