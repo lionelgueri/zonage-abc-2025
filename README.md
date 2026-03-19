@@ -14,11 +14,11 @@ Carte interactive du zonage ABC de toutes les communes françaises, mise à jour
 
 | Couleur | Zone | Description |
 |:-------:|------|-------------|
-| 🟣 | **A bis** | Agglomération parisienne — tension extrême |
-| 🔴 | **A** | Grandes métropoles — forte tension |
-| 🟠 | **B1** | Grandes agglomérations et zones chères |
-| 🟢 | **B2** | Villes moyennes avec tension modérée |
-| ⚪ | **C** | Reste du territoire — marché détendu |
+| 🟣 | **A bis** | Paris, 97 autres communes d'Île-de-France (Essonne, Yvelines, Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne, Val-d'Oise) et 36 communes en Province (Ain, Alpes-Maritimes, Bouches-du-Rhône, Oise, Haute-Savoie, Var). |
+| 🔴 | **A** | Agglomération de Paris (dont zone A bis), Côte d'Azur, agglomération genevoise française, grandes métropoles (Lille, Strasbourg, Lyon, Marseille, Montpellier, Toulouse, Bordeaux, Nantes, Rennes) et 10 communes d'outre-mer à loyers très élevés. |
+| 🟠 | **B1** | Grandes agglomérations à loyers élevés, partie de la grande couronne parisienne hors A bis/A, villes tendues de Province, communes d'outre-mer hors zone A. |
+| 🟡 | **B2** | Villes-centre de certaines agglomérations, grande couronne parisienne hors A bis/A/B1, communes à loyers assez élevés, Corse hors A/B1. |
+| ⬜ | **C** | Reste du territoire. |
 
 Les communes **reclassées** au 5 septembre 2025 sont signalées lors du clic sur la commune.
 
@@ -49,9 +49,13 @@ Les communes **reclassées** au 5 septembre 2025 sont signalées lors du clic su
 ```
 zonage-abc-2025/
 ├── index.html                                        # Application web (fichier unique)
+├── config.js                                         # Paramètres personnalisables (couleurs, zoom…)
 ├── data/
-│   ├── communes-2025.topo.json                       # Contours + zones fusionnés (TopoJSON)
-│   └── liste-des-communes-zonage-abc-5-septembre-2025.csv   # Données brutes officielles
+│   ├── communes-2025.topo.json                       # Contours + zones fusionnés (TopoJSON ~8 Mo)
+│   ├── liste-des-communes-zonage-abc-5-septembre-2025.csv         # Zonage complet 2025
+│   ├── liste-des-865-communes-reclassees-abc-juillet-2024.csv     # Évolutions juillet 2024
+│   ├── liste-des-468-communes-reclassees-zonage-abc-5-septembre-2025-1-.csv  # Reclassements 2025
+│   └── liste-des-19-communes-declassees-zonage-abc-5-septembre-2025.csv      # Déclassements 2025
 └── build-data.mjs                                    # Script de régénération des données
 ```
 
