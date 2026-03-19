@@ -12,12 +12,15 @@
 import { topology }  from 'topojson-server';
 import { feature  }  from 'topojson-client';
 import fs            from 'fs';
-import path          from 'path';
+import { createRequire } from 'module';
 
-// ── Chemins des fichiers (relatifs à ce script) ───────────────
-const FICHIER_TOPO = './data/communes-2025.topo.json';
-const FICHIER_CSV  = './data/liste-des-communes-zonage-abc-5-septembre-2025.csv';
-const FICHIER_OUT  = './data/communes-2025.topo.json'; // écrase l'existant
+// ── Chemins lus depuis config.js (source unique de vérité) ────
+const require = createRequire(import.meta.url);
+const { CONFIG } = require('./config.js');
+
+const FICHIER_CSV  = CONFIG.fichierCSV;
+const FICHIER_TOPO = CONFIG.fichierDonnees;
+const FICHIER_OUT  = CONFIG.fichierDonnees; // écrase l'existant
 
 // ─────────────────────────────────────────────────────────────
 // ÉTAPE 1 : Lecture et parsing du CSV local
