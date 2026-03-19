@@ -97,6 +97,18 @@ Ce script télécharge les dernières données et recrée `communes-2025.topo.js
 
 <br>
 
+## Auteur
+
+**Lionel Gueri** — Consultant Data & Business Intelligence
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-lionelgueri-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lionelgueri/)
+[![Blog](https://img.shields.io/badge/Blog-xlbusinesstools.com-FF5722?logo=google-chrome&logoColor=white)](https://xlbusinesstools.com/)
+[![YouTube](https://img.shields.io/badge/YouTube-excelbusinesstools-FF0000?logo=youtube&logoColor=white)](https://www.youtube.com/@excelbusinesstools)
+
+> Une question, une suggestion ou un bug ? Ouvre une [issue GitHub](https://github.com/lionelgueri/zonage-abc/issues) ou contacte-moi sur [LinkedIn](https://www.linkedin.com/in/lionelgueri/).
+
+<br>
+
 ---
 
 Réalisé avec [Leaflet](https://leafletjs.com/) · [TopoJSON](https://github.com/topojson/topojson) · [CartoDB](https://carto.com/)
