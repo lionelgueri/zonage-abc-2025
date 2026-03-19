@@ -46,6 +46,18 @@ const CONFIG = {
   // Source CSV en ligne (alternative au fichier local dans build-data.mjs)
   urlCSV: 'https://www.data.gouv.fr/api/1/datasets/r/13f7282b-8a25-43ab-9713-8bb4e476df55',
 
+  // ── Fichiers d'évolution (mode "Évolutions") ─────────────────
+  // CSV des communes reclassées vers une zone plus tendue (juillet 2024)
+  fichierEvo2024: './data/liste-des-865-communes-reclassees-abc-juillet-2024.csv',
+  // CSV des communes reclassées vers une zone plus tendue (5 sept. 2025)
+  fichierEvo2025reclasses: './data/liste-des-468-communes-reclassees-zonage-abc-5-septembre-2025-1-.csv',
+  // CSV des communes déclassées vers une zone moins tendue (5 sept. 2025)
+  fichierEvo2025declasses: './data/liste-des-19-communes-declassees-zonage-abc-5-septembre-2025.csv',
+
+  // ── Couleurs du mode Évolutions ───────────────────────────────
+  evoUpgrade:   { fill: '#e94560', stroke: '#b5001f', label: 'Zone plus tendue' },
+  evoDowngrade: { fill: '#4895ef', stroke: '#2470c0', label: 'Zone moins tendue' },
+
 };
 
 // Exportation pour Node.js (utilisé par build-data.mjs)
