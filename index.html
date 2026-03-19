@@ -370,7 +370,7 @@ let geojsonLayer = null;
 async function loadAll() {
   try {
     setStatus('Chargement des données…', 20);
-    const response = await fetch('./communes-2025.topo.json');
+    const response = await fetch('./data/communes-2025.topo.json');
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
     setStatus('Décompression…', 60);
